@@ -31,13 +31,41 @@ body.modal-open {
 
 .header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    justify-content: space-between;
     gap: 12px;
     margin-bottom: 16px;
 }
 
+.language-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
 
+.language-selector label {
+    font-size: 10px;
+    color: #666;
+    font-weight: 500;
+}
+
+.language-selector select {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 11px;
+    color: #333;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
 
 h1 {
     color: #333;
@@ -58,6 +86,9 @@ label {
     color: #555;
     font-weight: 500;
     font-size: 14px;
+}
+label[for="languageSelect"] {
+    margin-bottom: 0;
 }
 
 .description {

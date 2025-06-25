@@ -1,0 +1,150 @@
+{
+  "extensionName": {
+    "message": "URL छोटा करें",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "is.gd या v.gd सेवाओं का उपयोग करके URL छोटा करें",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "URL छोटा करें",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "URL दर्ज करें",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "URL दर्ज करें",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "URL छोटा करने की सेवा चुनें:",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "इन सेवाओं के बारे में",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "अतिरिक्त विकल्प/कस्टम URL",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "मानक (डिफ़ॉल्ट)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "छोटे अक्षर",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "छोटे अक्षर उच्चारणीय",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "इस लिंक के लिए आंकड़े दर्ज करें",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "कस्टम उपनाम (वैकल्पिक)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "कस्टम उपनाम दर्ज करें",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "छोटा करें!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "छोटा किया गया URL",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "क्लिपबोर्ड में कॉपी करें",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "URL छोटा कर रहे हैं...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "सहायता और जानकारी",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "बंद करें",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd और v.gd URL छोटा करने की सेवाएं हैं जो आपको आसान साझाकरण के लिए छोटी लिंक बनाने की अनुमति देती हैं।",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd और is.gd बहन सेवाएं हैं, लेकिन दो अलग URL छोटा करने वाली हैं। वे एक ही टीम द्वारा और एक ही प्लेटफॉर्म पर चलाई जाती हैं, इसलिए उनकी कार्यक्षमता बहुत समान है। उनके बीच मुख्य अंतर यह है कि v.gd डिफ़ॉल्ट रूप से एक लिंक पूर्वावलोकन पृष्ठ प्रदर्शित करता है जब भी कोई इसके छोटे URLs में से किसी एक पर जाता है, लेकिन is.gd नहीं करता (डिफ़ॉल्ट रूप से यह लोगों को सीधे लिंक के गंतव्य पर भेजता है)। इस कारण से v.gd को थोड़ा \"सुरक्षित\" विकल्प के रूप में देखा जा सकता है और उन उपयोगकर्ताओं के लिए उपयोगी है जो हमेशा यह जानना चाहते हैं कि क्लिक करने से पहले लिंक कहां जाती है।",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "आप 5,000 वर्णों तक के URL छोटा कर सकते हैं।",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "आप अपने छोटे URLs के लिए कस्टम उपनाम बना सकते हैं, लेकिन वे अद्वितीय होने चाहिए और पहले से उपयोग में नहीं होने चाहिए। यदि आप कस्टम उपनाम फ़ील्ड को खाली छोड़ देते हैं, तो एक यादृच्छिक उपनाम उत्पन्न होगा।",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "\"इस लिंक के लिए आंकड़े दर्ज करें\" विकल्प आपको अपने छोटे URL पर क्लिक की संख्या को ट्रैक करने की अनुमति देता है। यदि सक्षम है, तो आप इन आंकड़ों को बाद में देख सकते हैं।",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "छोटी लिंक के पूर्वावलोकन पृष्ठ पर जाएं या तो लिंक के अंत में एक डैश (-) जोड़कर या स्वचालित पूर्वावलोकन चालू करके और फिर लिंक पर जाकर। एक बार वहां पहुंचने पर, पृष्ठ के नीचे के पास के विकल्प का उपयोग करें जो कहता है \"मैं इस लिंक के लिए आंकड़े देखना चाहता हूं\"।",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "\"छोटी लिंक प्रकार\" विकल्प आपको चुनने की अनुमति देता है कि छोटा किया गया URL कैसे स्वरूपित किया जाए। डिफ़ॉल्ट मानक है, लेकिन आप छोटे अक्षर या उच्चारणीय प्रारूप भी चुन सकते हैं।",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "छोटी लिंक एक बार बनने के बाद स्थायी होती हैं। हमारे द्वारा इसकी पेशकश न करने का मुख्य कारण यह है कि इसका दुरुपयोग हो सकता है (जैसे स्पैमर निर्दोष लिंक बना सकते हैं और बाद में उन्हें कहीं दुर्भावनापूर्ण स्थान पर इंगित कर सकते हैं)।",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "URL का कस्टम भाग (https://is.gd/ के बाद सब कुछ) 5 से 30 वर्णों के बीच होना चाहिए। कस्टम URL केस संवेदनशील होते हैं और केवल बड़े और छोटे अक्षरों, संख्याओं और अंडरस्कोर (_) प्रतीक से मिलकर बन सकते हैं। कस्टम URL में गैर-अंग्रेजी वर्णों की अनुमति नहीं है (लेकिन आप उन्हें शामिल करने वाले URL छोटा कर सकते हैं)। उनकी कोई अन्य प्रतिबंध नहीं हैं और हम इंटरनेट के नैतिक संरक्षक बनने की योजना नहीं बनाते हैं, इसलिए अशिष्ट शब्दों जैसी चीजों की अनुमति है।",
+    "description": "Help text paragraph 8"
+  },
+  "helpText9": {
+    "message": "इन सेवाओं के बारे में अधिक जानकारी के लिए, आप उनकी संबंधित वेबसाइटों पर जा सकते हैं:",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "कृपया छोटा करने के लिए एक URL दर्ज करें",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "कृपया एक वैध URL दर्ज करें",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "URL छोटा करने में विफल",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "क्लिपबोर्ड में कॉपी करने में विफल",
+    "description": "Error message for copy failure"
+  },
+  "dismissError": {
+    "message": "त्रुटि खारिज करें",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "भाषा",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "इस URL को छोटा करें",
+    "description": "Context menu item text"
+  }
+}

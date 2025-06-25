@@ -1,16 +1,29 @@
 # URL Shorten Chrome Extension
 
-A Chrome extension that allows you to quickly shorten URLs using is.gd or v.gd services directly from your browser.
+A Chrome extension that allows you to shorten URLs using is.gd or v.gd services with support for multiple languages.
 
 ## Features
 
-- 🔗 Shorten URLs using is.gd or v.gd services
-- 🎯 Auto-detect current tab URL
-- ✏️ Custom alias support
-- 📋 One-click copy to clipboard
-- 🖱️ Right-click context menu integration
-- 🎨 Modern, responsive UI design
-- ⚡ Fast and lightweight
+- 🔗 **URL Shortening**: Quickly shorten long URLs using is.gd or v.gd services
+- � **Multiple Languages**: Support for English, Chinese (中文), Japanese (日本語), and Vietnamese (Tiếng Việt)
+- ✏️ **Custom Aliases**: Create custom short URLs with your own aliases
+- 📊 **Statistics Tracking**: Option to track click statistics for your shortened URLs
+- 🎨 **Multiple Formats**: Choose between standard, lowercase, or pronounceable formats
+- 📋 **One-click Copy**: Copy shortened URLs to clipboard instantly
+- 🎯 **Auto URL Detection**: Automatically loads the current tab's URL when opened
+- 🖱️ **Context Menu**: Right-click on any link or page to shorten it
+- ⚡ Fast and lightweight with modern, responsive UI design
+
+## Language Support
+
+The extension supports multiple languages with automatic detection:
+
+- **English** (default)
+- **中文** (Chinese Simplified)
+- **日本語** (Japanese)  
+- **Tiếng Việt** (Vietnamese)
+
+You can manually change the language using the language selector in the top-right corner of the extension popup. Your language preference is saved and synced across your Chrome browsers.
 
 ## Installation
 
@@ -110,6 +123,41 @@ Convert the SVG icon to PNG format in multiple sizes:
 4. Test thoroughly
 5. Submit a pull request
 
+### Adding New Languages
+
+To add support for a new language:
+
+1. Create a new folder in `_locales/` with the language code (e.g., `fr` for French)
+2. Copy `_locales/en/messages.json` to the new folder
+3. Translate all message values while keeping the keys unchanged
+4. Add the new language option to the language selector in `popup.html`
+5. Test the new language thoroughly
+
+### File Structure
+
+```
+├── manifest.json          # Extension manifest with i18n support
+├── popup.html             # Main popup interface with data-i18n attributes
+├── popup.css              # Popup styling with language selector
+├── popup.js               # Main popup logic with i18n functionality
+├── background.js          # Background script with i18n context menu
+├── _locales/              # Internationalization files
+│   ├── en/messages.json   # English translations (default)
+│   ├── zh/messages.json   # Chinese translations
+│   ├── ja/messages.json   # Japanese translations
+│   └── vi/messages.json   # Vietnamese translations
+└── icons/                 # Extension icons
+```
+
+## Privacy & Security
+
+This extension:
+- Only processes URLs when explicitly requested by the user
+- Does not track, store, or transmit personal data
+- Uses official is.gd and v.gd APIs over HTTPS
+- Stores only language preferences in Chrome sync storage
+- All data processing happens locally in your browser
+
 ## License
 
 MIT License - see LICENSE file for details
@@ -122,6 +170,9 @@ If you encounter any issues:
 2. Verify that is.gd and v.gd services are accessible
 3. Check the browser console for error messages
 4. Reload the extension in chrome://extensions/
+5. Try switching languages to see if it's a localization issue
+
+For bug reports or feature requests, please create an issue in the repository.
 
 ## Version History
 

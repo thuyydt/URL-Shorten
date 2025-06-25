@@ -1,0 +1,150 @@
+{
+  "extensionName": {
+    "message": "Rút gọn URL",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Rút gọn URL bằng dịch vụ is.gd hoặc v.gd",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "Rút gọn URL",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "Nhập URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "Nhập URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "Chọn dịch vụ rút gọn URL:",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "Về các dịch vụ này",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "Tùy chọn nâng cao/URL tùy chỉnh",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "Tiêu chuẩn (mặc định)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "Chữ thường",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "Chữ thường dễ phát âm",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "Ghi lại thống kê cho liên kết này",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "Bí danh tùy chỉnh (tùy chọn)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "Nhập bí danh tùy chỉnh",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "Rút gọn!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "URL đã rút gọn",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "Sao chép vào clipboard",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "Đang rút gọn URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "Trợ giúp & Thông tin",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "Đóng",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd và v.gd là các dịch vụ rút gọn URL cho phép bạn tạo liên kết ngắn để chia sẻ dễ dàng hơn.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd và is.gd là các dịch vụ anh em, nhưng là hai công cụ rút gọn URL riêng biệt. Chúng được điều hành bởi cùng một nhóm và trên cùng một nền tảng, vì vậy chức năng của chúng rất giống nhau. Sự khác biệt chính giữa chúng là v.gd hiển thị trang xem trước liên kết theo mặc định bất cứ khi nào ai đó truy cập một trong các URL rút gọn của nó, nhưng is.gd thì không (theo mặc định, nó sẽ đưa mọi người thẳng đến đích của liên kết). Vì lý do này, v.gd có thể được coi là một tùy chọn an toàn hơn một chút và hữu ích cho những người dùng luôn muốn biết liên kết dẫn đến đâu trước khi nhấp vào nó.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "Bạn có thể rút gọn URL dài tới 5.000 ký tự.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "Bạn có thể tạo bí danh tùy chỉnh cho URL rút gọn của mình, nhưng chúng phải là duy nhất và chưa được sử dụng. Nếu bạn để trống trường bí danh tùy chỉnh, một bí danh ngẫu nhiên sẽ được tạo.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "Tùy chọn Ghi lại thống kê cho liên kết này cho phép bạn theo dõi số lượt nhấp vào URL rút gọn của mình. Nếu được bật, bạn có thể xem các thống kê này sau.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "Truy cập trang xem trước của liên kết rút gọn bằng cách thêm dấu gạch ngang (-) vào cuối liên kết hoặc bằng cách bật xem trước tự động rồi truy cập liên kết. Khi đến đó, hãy sử dụng tùy chọn gần cuối trang có nội dung Tôi muốn xem thống kê cho liên kết này.",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "Tùy chọn Loại liên kết rút gọn cho phép bạn chọn cách định dạng URL rút gọn. Mặc định là tiêu chuẩn, nhưng bạn cũng có thể chọn định dạng chữ thường hoặc dễ phát âm.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "Các liên kết rút gọn là vĩnh viễn sau khi được tạo. Lý do chính mà chúng tôi không cung cấp điều này là nó có thể bị lạm dụng (ví dụ: những kẻ gửi thư rác có thể tạo liên kết vô hại và sau đó chỉ chúng đến một nơi nào đó độc hại).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "Phần tùy chỉnh của URL (mọi thứ sau https://is.gd/) phải dài từ 5 đến 30 ký tự. URL tùy chỉnh phân biệt chữ hoa chữ thường và chỉ có thể bao gồm chữ cái hoa và thường, số và ký hiệu gạch dưới (_). Ký tự không phải tiếng Anh không được phép trong URL tùy chỉnh (nhưng bạn có thể rút gọn URL có chứa chúng). Chúng không có hạn chế nào khác và không có kế hoạch bổ nhiệm bản thân làm người bảo vệ đạo đức của Internet, vì vậy những thứ như từ thô tục được phép.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText9": {
+    "message": "Để biết thêm thông tin về các dịch vụ này, bạn có thể truy cập các trang web tương ứng của chúng:",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "Vui lòng nhập URL để rút gọn",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "Vui lòng nhập URL hợp lệ",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "Không thể rút gọn URL",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "Không thể sao chép vào clipboard",
+    "description": "Error message for copy failure"
+  },
+  "dismissError": {
+    "message": "Đóng lỗi",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "Ngôn ngữ",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "Rút gọn URL này",
+    "description": "Context menu item text"
+  }
+}

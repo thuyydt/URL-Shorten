@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // I18n functionality
+    let currentLanguage = 'en';
+    let messages = {};
+
     const urlInput = document.getElementById('urlInput');
     const customAlias = document.getElementById('customAlias');
     const isGdBtn = document.getElementById('isGdBtn');
@@ -14,8 +18,106 @@ document.addEventListener('DOMContentLoaded', function() {
     const error = document.getElementById('error');
     const shortenType = document.getElementById('shortenType');
     const logStats = document.getElementById('logStats');
+    const languageSelect = document.getElementById('languageSelect');
 
     let selectedService = 'is.gd';
+
+    // Load messages and initialize UI
+    loadMessages().then(() => {
+        loadLanguagePreference();
+        updateUI();
+        initializeUI();
+    });
+
+    async function loadMessages() {
+        try {
+            const lang = await getCurrentLanguage();
+            messages = await getMessages(lang);
+        } catch (error) {
+            console.error('Error loading messages:', error);
+            // Fallback to English
+            currentLanguage = 'en';
+            messages = await getMessages('en');
+        }
+    }
+
+    async function getCurrentLanguage() {
+        const stored = await new Promise((resolve) => {
+            chrome.storage.sync.get(['selectedLanguage'], (result) => {
+                resolve(result.selectedLanguage || 'en');
+            });
+        });
+        return stored;
+    }
+
+    async function getMessages(lang) {
+        try {
+            const response = await fetch(chrome.runtime.getURL(`_locales/${lang}/messages.json`));
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error(`Error loading messages for ${lang}:`, error);
+            if (lang !== 'en') {
+                // Fallback to English
+                return getMessages('en');
+            }
+            return {};
+        }
+    }
+
+    function updateUI() {
+        // Update all elements with data-i18n attribute
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (messages[key]) {
+                element.textContent = messages[key].message;
+            }
+        });
+
+        // Update placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            if (messages[key]) {
+                element.placeholder = messages[key].message;
+            }
+        });
+
+        // Update titles
+        document.querySelectorAll('[data-i18n-title]').forEach(element => {
+            const key = element.getAttribute('data-i18n-title');
+            if (messages[key]) {
+                element.title = messages[key].message;
+            }
+        });
+    }
+
+    function loadLanguagePreference() {
+        chrome.storage.sync.get(['selectedLanguage'], (result) => {
+            currentLanguage = result.selectedLanguage || 'en';
+            if (languageSelect) {
+                languageSelect.value = currentLanguage;
+            }
+        });
+    }
+
+    function getMessage(key) {
+        return messages[key] ? messages[key].message : key;
+    }
+
+    // Language selector handler
+    if (languageSelect) {
+        languageSelect.addEventListener('change', async function() {
+            const selectedLang = this.value;
+            currentLanguage = selectedLang;
+            
+            // Save preference
+            chrome.storage.sync.set({ selectedLanguage: selectedLang });
+            
+            // Reload messages and update UI
+            messages = await getMessages(selectedLang);
+            updateUI();
+        });
+    }
 
     // Initialize UI state
     function initializeUI() {
@@ -114,12 +216,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const options = getShortenOptions();
 
         if (!url) {
-            showError('Please enter a URL to shorten');
+            showError(getMessage('errorEnterUrl'));
             return;
         }
 
         if (!isValidUrl(url)) {
-            showError('Please enter a valid URL');
+            showError(getMessage('errorValidUrl'));
             return;
         }
 
@@ -130,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const shortUrl = await shortenUrl(url, selectedService, alias, options);
             showResult(shortUrl);
         } catch (err) {
-            showError(err.message || 'Failed to shorten URL');
+            showError(err.message || getMessage('errorShortenFailed'));
         } finally {
             hideLoading();
         }
@@ -144,18 +246,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Visual feedback - replace icon with checkmark
             const originalHTML = copyBtn.innerHTML;
             copyBtn.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#28a745">
-                    <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#28a745"><path d="M268-240 42-466l57-56 170 170 56 56-57 56Zm226 0L268-466l56-57 170 170 368-368 56 57-424 424Zm0-226-57-56 198-198 57 56-198 198Z"/></svg>
             `;
             copyBtn.style.borderColor = '#28a745';
             
             setTimeout(() => {
                 copyBtn.innerHTML = originalHTML;
                 copyBtn.style.borderColor = '';
-            }, 1500);
+            }, 3000);
         } catch (err) {
-            showError('Failed to copy to clipboard');
+            showError(getMessage('errorCopyFailed'));
         }
     });
 
@@ -275,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dismissBtn = document.createElement('button');
         dismissBtn.className = 'error-dismiss';
         dismissBtn.innerHTML = '×';
-        dismissBtn.title = 'Dismiss error';
+        dismissBtn.title = getMessage('dismissError');
         dismissBtn.addEventListener('click', hideError);
         
         error.appendChild(errorContent);

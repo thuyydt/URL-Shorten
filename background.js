@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
     // Create context menu item
     chrome.contextMenus.create({
         id: 'shortenUrl',
-        title: 'Shorten this URL',
+        title: chrome.i18n.getMessage('contextMenuShorten') || 'Shorten this URL',
         contexts: ['link', 'page']
     });
 });

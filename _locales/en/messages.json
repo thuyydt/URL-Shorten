@@ -1,0 +1,150 @@
+{
+  "extensionName": {
+    "message": "URL Shorten",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Shorten URLs using is.gd or v.gd services",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "URL Shorten",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "Enter URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "Enter URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "Choose URL shortening service:",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "About these services",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "Further options/custom URL",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "Standard (default)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "Lower case",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "Lower case pronounceable",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "Log statistics for this link",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "Custom alias (optional)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "Enter custom alias",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "Shorten!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "Shortened URL",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "Copy to clipboard",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "Shortening URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "Help & Information",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "Close",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd and v.gd are URL shortening services that allow you to create short links for easier sharing.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd and is.gd are sister services, but are two separate URL Shorten. They're run by the same team and on the same platform, so their functionality is very similar. The main difference between them is that v.gd displays a link preview page by default whenever somebody visits one of its shortened URLs, but is.gd doesn't (by default it sends people straight to the link's destination). For this reason v.gd can be seen as a slightly \"safer\" option and is handy for users who always want to know where a link goes before clicking it.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "You can shorten URLs up to 5,000 characters long.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "You can create custom aliases for your shortened URLs, but they must be unique and not already in use. If you leave the custom alias field empty, a random alias will be generated.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "The \"Log statistics for this link\" option allows you to track the number of clicks on your shortened URL. If enabled, you can view these statistics later.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "Visit the shortened link's preview page either by adding a dash (-) to the end of the link or by turning on automatic previews then visiting the link. Once there use the option near the bottom of the page that says \"I want to see statistics for this link\".",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "The \"Shorten link type\" option allows you to choose how the shortened URL is formatted. The default is standard, but you can also choose lowercase or pronounceable formats.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "The shortened links are permanent once created. The main reason that we don't offer this is that it could be abused (e.g. spammers could create innocuous links and later point them somewhere malicious).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "The custom part of the URL (everything after https://is.gd/) must be between 5 and 30 characters long. Custom URLs are case sensitive and can only consist of upper and lower case letters, numbers and the underscore (_) symbol. Non-English characters aren't allowed in custom URLs (but you can shorten URLs containing them). They don't have any other restrictions and don't plan to appoint ourselves the moral guardians of the Internet, so things like rude words are allowed.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText9": {
+    "message": "For more information about these services, you can visit their respective websites:",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "Please enter a URL to shorten",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "Please enter a valid URL",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "Failed to shorten URL",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "Failed to copy to clipboard",
+    "description": "Error message for copy failure"
+  },
+  "dismissError": {
+    "message": "Dismiss error",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "Language",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "Shorten this URL",
+    "description": "Context menu item text"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "extensionName": {
+    "message": "URL 缩短",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "使用 is.gd 或 v.gd 服务缩短 URL",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "URL 缩短",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "输入 URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "输入 URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "选择 URL 缩短服务：",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "关于这些服务",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "进一步选项/自定义 URL",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "标准（默认）",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "小写",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "小写可读",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "记录此链接的统计信息",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "自定义别名（可选）",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "输入自定义别名",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "缩短！",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "缩短的 URL",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "复制到剪贴板",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "正在缩短 URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "帮助与信息",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "关闭",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd 和 v.gd 是 URL 缩短服务，允许您创建短链接以便于分享。",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd 和 is.gd 是姊妹服务，但是两个独立的 URL 缩短器。它们由同一团队运营，在同一平台上，因此功能非常相似。它们之间的主要区别是，当有人访问缩短的 URL 时，v.gd 默认显示链接预览页面，但 is.gd 不会（默认情况下直接跳转到链接的目标）。因此，v.gd 可以被视为稍微更安全的选项，对于总是想在点击之前知道链接去向的用户很有用。",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "您可以缩短长度最多 5,000 个字符的 URL。",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "您可以为缩短的 URL 创建自定义别名，但它们必须是唯一的且尚未使用。如果您将自定义别名字段留空，将生成随机别名。",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "记录此链接的统计信息选项允许您跟踪缩短 URL 的点击次数。如果启用，您可以稍后查看这些统计信息。",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "通过在链接末尾添加破折号（-）或打开自动预览然后访问链接来访问缩短链接的预览页面。到达那里后，使用页面底部附近的选项，上面写着我想查看此链接的统计信息。",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "缩短链接类型选项允许您选择缩短 URL 的格式。默认是标准格式，但您也可以选择小写或可读格式。",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "缩短的链接一旦创建就是永久的。我们不提供此功能的主要原因是它可能被滥用（例如，垃圾邮件发送者可以创建无害的链接，然后将它们指向恶意地址）。",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "URL 的自定义部分（https://is.gd/ 之后的所有内容）必须在 5 到 30 个字符之间。自定义 URL 区分大小写，只能包含大小写字母、数字和下划线（_）符号。自定义 URL 中不允许使用非英语字符（但您可以缩短包含它们的 URL）。它们没有其他限制，也不打算任命自己为互联网的道德守护者，因此允许粗话等内容。",
+    "description": "Help text paragraph 8"
+  },
+  "helpText9": {
+    "message": "有关这些服务的更多信息，您可以访问它们各自的网站：",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "请输入要缩短的 URL",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "请输入有效的 URL",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "缩短 URL 失败",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "复制到剪贴板失败",
+    "description": "Error message for copy failure"
+  },
+  "dismissError": {
+    "message": "关闭错误",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "语言",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "缩短此 URL",
+    "description": "Context menu item text"
+  }
+}

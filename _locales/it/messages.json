@@ -1,0 +1,150 @@
+{
+  "extensionName": {
+    "message": "Accorcia URL",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Accorcia URL utilizzando i servizi is.gd o v.gd",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "Accorcia URL",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "Inserisci URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "Inserisci URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "Scegli il servizio di accorciamento URL:",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "Informazioni su questi servizi",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "Opzioni aggiuntive/URL personalizzato",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "Standard (predefinito)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "Minuscole",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "Minuscole pronunciabili",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "Registra statistiche per questo link",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "Alias personalizzato (opzionale)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "Inserisci alias personalizzato",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "Accorcia!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "URL accorciato",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "Copia negli appunti",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "Accorciamento URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "Aiuto e Informazioni",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "Chiudi",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd e v.gd sono servizi di accorciamento URL che ti permettono di creare link corti per una condivisione più facile.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd e is.gd sono servizi gemelli, ma sono due accorciatori di URL separati. Sono gestiti dallo stesso team e sulla stessa piattaforma, quindi la loro funzionalità è molto simile. La principale differenza tra loro è che v.gd mostra una pagina di anteprima del link per impostazione predefinita ogni volta che qualcuno visita uno dei suoi URL accorciati, ma is.gd non lo fa (per impostazione predefinita invia le persone direttamente alla destinazione del link). Per questo motivo v.gd può essere visto come un'opzione leggermente più \"sicura\" ed è utile per gli utenti che vogliono sempre sapere dove va un link prima di cliccarlo.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "Puoi accorciare URL lunghi fino a 5.000 caratteri.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "Puoi creare alias personalizzati per i tuoi URL accorciati, ma devono essere unici e non già in uso. Se lasci vuoto il campo alias personalizzato, verrà generato un alias casuale.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "L'opzione \"Registra statistiche per questo link\" ti permette di tracciare il numero di clic sul tuo URL accorciato. Se abilitata, puoi visualizzare queste statistiche in seguito.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "Visita la pagina di anteprima del link accorciato aggiungendo un trattino (-) alla fine del link o attivando le anteprime automatiche e poi visitando il link. Una volta lì, usa l'opzione vicino al fondo della pagina che dice \"Voglio vedere le statistiche per questo link\".",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "L'opzione \"Tipo di link accorciato\" ti permette di scegliere come viene formattato l'URL accorciato. Il predefinito è standard, ma puoi anche scegliere formati minuscoli o pronunciabili.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "I link accorciati sono permanenti una volta creati. Il motivo principale per cui non offriamo questo è che potrebbe essere abusato (ad esempio, gli spammer potrebbero creare link innocui e poi puntarli da qualche parte di malizioso).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "La parte personalizzata dell'URL (tutto dopo https://is.gd/) deve essere tra 5 e 30 caratteri di lunghezza. Gli URL personalizzati sono sensibili alle maiuscole e possono consistere solo di lettere maiuscole e minuscole, numeri e il simbolo underscore (_). I caratteri non inglesi non sono consentiti negli URL personalizzati (ma puoi accorciare URL che li contengono). Non hanno altre restrizioni e non abbiamo intenzione di nominarci guardiani morali di Internet, quindi cose come le parolacce sono consentite.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText9": {
+    "message": "Per maggiori informazioni su questi servizi, puoi visitare i loro rispettivi siti web:",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "Per favore inserisci un URL da accorciare",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "Per favore inserisci un URL valido",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "Impossibile accorciare l'URL",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "Impossibile copiare negli appunti",
+    "description": "Error message for copy failure"
+  },
+  "dismissError": {
+    "message": "Ignora errore",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "Lingua",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "Accorcia questo URL",
+    "description": "Context menu item text"
+  }
+}

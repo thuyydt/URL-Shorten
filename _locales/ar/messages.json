@@ -1,0 +1,150 @@
+{
+  "extensionName": {
+    "message": "اختصار الرابط",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "اختصر الروابط باستخدام خدمات is.gd أو v.gd",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "اختصار الرابط",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "أدخل الرابط",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "أدخل الرابط",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "اختر خدمة اختصار الروابط:",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "حول هذه الخدمات",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "خيارات إضافية/رابط مخصص",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "قياسي (افتراضي)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "أحرف صغيرة",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "أحرف صغيرة قابلة للنطق",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "تسجيل إحصائيات هذا الرابط",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "اسم مستعار مخصص (اختياري)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "أدخل اسماً مستعاراً مخصصاً",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "اختصر!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "الرابط المختصر",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "نسخ إلى الحافظة",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "جاري اختصار الرابط...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "المساعدة والمعلومات",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "إغلاق",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd و v.gd هما خدمتان لاختصار الروابط تتيحان لك إنشاء روابط قصيرة لمشاركة أسهل.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd و is.gd هما خدمتان شقيقتان، لكنهما مختصران منفصلان للروابط. تديرهما نفس الفريق وعلى نفس المنصة، لذا فإن وظائفهما متشابهة جداً. الفرق الرئيسي بينهما هو أن v.gd يعرض صفحة معاينة الرابط افتراضياً كلما زار شخص ما أحد روابطه المختصرة، لكن is.gd لا يفعل ذلك (افتراضياً يرسل الأشخاص مباشرة إلى وجهة الرابط). لهذا السبب يمكن اعتبار v.gd خياراً \"أكثر أماناً\" قليلاً وهو مفيد للمستخدمين الذين يريدون دائماً معرفة وجهة الرابط قبل النقر عليه.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "يمكنك اختصار روابط يصل طولها إلى 5000 حرف.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "يمكنك إنشاء أسماء مستعارة مخصصة لروابطك المختصرة، لكن يجب أن تكون فريدة وغير مستخدمة مسبقاً. إذا تركت حقل الاسم المستعار المخصص فارغاً، سيتم إنشاء اسم مستعار عشوائي.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "خيار \"تسجيل إحصائيات هذا الرابط\" يتيح لك تتبع عدد النقرات على رابطك المختصر. إذا تم تفعيله، يمكنك عرض هذه الإحصائيات لاحقاً.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "قم بزيارة صفحة معاينة الرابط المختصر إما بإضافة شرطة (-) إلى نهاية الرابط أو بتشغيل المعاينات التلقائية ثم زيارة الرابط. بمجرد وصولك هناك، استخدم الخيار بالقرب من أسفل الصفحة الذي يقول \"أريد رؤية إحصائيات هذا الرابط\".",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "خيار \"نوع الرابط المختصر\" يتيح لك اختيار كيفية تنسيق الرابط المختصر. الافتراضي هو قياسي، لكن يمكنك أيضاً اختيار تنسيقات الأحرف الصغيرة أو القابلة للنطق.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "الروابط المختصرة دائمة بمجرد إنشائها. السبب الرئيسي في عدم تقديمنا لهذا هو أنه قد يُساء استخدامه (مثلاً، قد ينشئ المرسلون للرسائل المزعجة روابط بريئة ثم يوجهونها لاحقاً إلى مكان ضار).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "الجزء المخصص من الرابط (كل شيء بعد https://is.gd/) يجب أن يكون بين 5 و 30 حرف في الطول. الروابط المخصصة حساسة لحالة الأحرف ويمكن أن تتكون فقط من الأحرف الكبيرة والصغيرة والأرقام ورمز الشرطة السفلية (_). الأحرف غير الإنجليزية غير مسموحة في الروابط المخصصة (لكن يمكنك اختصار روابط تحتويها). ليس لديها قيود أخرى ولا نخطط لتعيين أنفسنا كحراس أخلاقيين للإنترنت، لذا فإن أشياء مثل الكلمات الفظة مسموحة.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText9": {
+    "message": "لمزيد من المعلومات حول هذه الخدمات، يمكنك زيارة مواقعها الإلكترونية:",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "يرجى إدخال رابط لاختصاره",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "يرجى إدخال رابط صحيح",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "فشل في اختصار الرابط",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "فشل في النسخ إلى الحافظة",
+    "description": "Error message for copy failure"
+  },
+  "dismissError": {
+    "message": "تجاهل الخطأ",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "اللغة",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "اختصر هذا الرابط",
+    "description": "Context menu item text"
+  }
+}
