@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const urlInput = document.getElementById('urlInput');
-    const pasteUrlBtn = document.getElementById('pasteUrlBtn');
     const customAlias = document.getElementById('customAlias');
     const isGdBtn = document.getElementById('isGdBtn');
     const vGdBtn = document.getElementById('vGdBtn');
@@ -157,20 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1500);
         } catch (err) {
             showError('Failed to copy to clipboard');
-        }
-    });
-
-    // Paste URL from clipboard
-    pasteUrlBtn.addEventListener('click', async function() {
-        try {
-            const text = await navigator.clipboard.readText();
-            if (text && (text.startsWith('http://') || text.startsWith('https://'))) {
-                urlInput.value = text;
-            } else {
-                showError('No valid URL found in clipboard');
-            }
-        } catch (err) {
-            showError('Failed to access clipboard');
         }
     });
 
