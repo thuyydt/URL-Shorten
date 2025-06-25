@@ -21,7 +21,7 @@ body.modal-open {
 .container {
     width: 100%;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-radius: 16px;
@@ -170,6 +170,8 @@ label {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    scale: 1.2;
+    transition: transform 0.2s ease;
 }
 
 .service-btn:hover {
@@ -180,7 +182,7 @@ label {
 
 .service-btn.active {
     border-color: #667eea;
-    background: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 

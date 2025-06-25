@@ -1,4 +1,4 @@
-// Background script for URL Shortener extension
+// Background script for URL Shorten extension
 
 chrome.runtime.onInstalled.addListener(() => {
     // Create context menu item

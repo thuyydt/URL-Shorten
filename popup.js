@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             headers: {
                 'Accept': 'text/plain, */*',
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'User-Agent': 'URL Shortener Chrome Extension'
+                'User-Agent': 'URL Shorten Chrome Extension'
             },
             body: params.toString()
         });
