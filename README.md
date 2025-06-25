@@ -1,4 +1,4 @@
-# URL Shortener Chrome Extension
+# URL Shorten Chrome Extension
 
 A Chrome extension that allows you to quickly shorten URLs using is.gd or v.gd services directly from your browser.
 

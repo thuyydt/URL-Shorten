@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "URL Shortener",
+  "name": "URL Shorten",
   "version": "1.0.0",
   "description": "Shorten URLs using is.gd or v.gd services",
   "permissions": [
