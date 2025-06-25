@@ -1,11 +1,21 @@
-# URL Shorten Chrome Extension
+# UR## Features
 
-A Chrome extension that allows you to shorten URLs using is.gd or v.gd services with support for multiple languages.
+- 🔗 **URL Shortening**: Quickly shorten long URLs using is.gd or v.gd services
+- 🌍 **Multiple Languages**: Support for 12 languages including English, Chinese, Japanese, Arabic, German, Spanish, French, Hindi, Italian, Portuguese, Russian, and Vietnamese
+- ✏️ **Custom Aliases**: Create custom short URLs with your own aliases
+- 📊 **Statistics Tracking**: Option to track click statistics for your shortened URLs
+- 🎨 **Multiple Formats**: Choose between standard, lowercase, or pronounceable formats
+- 📋 **One-click Copy**: Copy shortened URLs to clipboard instantly
+- 🎯 **Auto URL Detection**: Automatically loads the current tab's URL when opened
+- 🖱️ **Context Menu**: Right-click on any link or page to shorten it
+- ⚡ Fast and lightweight with modern, responsive UI designhrome Extension
+
+A Chrome extension that allows you to shorten URLs using is.gd or v.gd services with comprehensive support for 12 languages including English, Chinese, Japanese, Arabic, German, Spanish, French, Hindi, Italian, Portuguese, Russian, and Vietnamese.
 
 ## Features
 
 - 🔗 **URL Shortening**: Quickly shorten long URLs using is.gd or v.gd services
-- � **Multiple Languages**: Support for English, Chinese (中文), Japanese (日本語), and Vietnamese (Tiếng Việt)
+- 🌍 **Multiple Languages**: Support for 12 languages, including Chinese, Japanese, Arabic, and more
 - ✏️ **Custom Aliases**: Create custom short URLs with your own aliases
 - 📊 **Statistics Tracking**: Option to track click statistics for your shortened URLs
 - 🎨 **Multiple Formats**: Choose between standard, lowercase, or pronounceable formats
@@ -14,14 +24,122 @@ A Chrome extension that allows you to shorten URLs using is.gd or v.gd services 
 - 🖱️ **Context Menu**: Right-click on any link or page to shorten it
 - ⚡ Fast and lightweight with modern, responsive UI design
 
+---
+
+## 特性 (中文)
+
+- 🔗 **URL 缩短**: 使用 is.gd 或 v.gd 服务快速缩短长 URL
+- 🌍 **多语言支持**: 支持 12 种语言，包括中文、日语、阿拉伯语等
+- ✏️ **自定义别名**: 使用您自己的别名创建自定义短 URL
+- 📊 **统计跟踪**: 可选择跟踪缩短 URL 的点击统计
+- 🎨 **多种格式**: 选择标准、小写或易读格式
+- 📋 **一键复制**: 瞬间将缩短的 URL 复制到剪贴板
+- 🎯 **自动 URL 检测**: 打开时自动加载当前标签页的 URL
+- 🖱️ **上下文菜单**: 右键点击任何链接或页面即可缩短
+- ⚡ 快速轻量，现代响应式 UI 设计
+
+---
+
+## 機能 (日本語)
+
+- 🔗 **URL短縮**: is.gd または v.gd サービスを使用して長いURLを素早く短縮
+- 🌍 **多言語サポート**: 日本語、中国語、アラビア語など12言語をサポート
+- ✏️ **カスタムエイリアス**: 独自のエイリアスでカスタム短縮URLを作成
+- 📊 **統計追跡**: 短縮URLのクリック統計を追跡するオプション
+- 🎨 **複数フォーマット**: 標準、小文字、または発音可能なフォーマットから選択
+- 📋 **ワンクリックコピー**: 短縮URLを瞬時にクリップボードにコピー
+- 🎯 **自動URL検出**: 開いたときに現在のタブのURLを自動読み込み
+- 🖱️ **コンテキストメニュー**: 任意のリンクやページを右クリックして短縮
+- ⚡ 高速で軽量、モダンなレスポンシブUIデザイン
+
+---
+
+## Fonctionnalités (Français)
+
+- 🔗 **Raccourcissement d'URL**: Raccourcissez rapidement les longues URL avec les services is.gd ou v.gd
+- 🌍 **Support multilingue**: Support de 12 langues incluant français, chinois, arabe, etc.
+- ✏️ **Alias personnalisés**: Créez des URL courtes personnalisées avec vos propres alias
+- 📊 **Suivi des statistiques**: Option pour suivre les statistiques de clics de vos URL raccourcies
+- 🎨 **Formats multiples**: Choisissez entre les formats standard, minuscule ou prononçable
+- 📋 **Copie en un clic**: Copiez les URL raccourcies dans le presse-papiers instantanément
+- 🎯 **Détection automatique d'URL**: Charge automatiquement l'URL de l'onglet actuel à l'ouverture
+- 🖱️ **Menu contextuel**: Clic droit sur n'importe quel lien ou page pour le raccourcir
+- ⚡ Rapide et léger avec un design d'interface utilisateur moderne et réactif
+
+---
+
+## Características (Español)
+
+- 🔗 **Acortamiento de URL**: Acorta rápidamente URLs largas usando los servicios is.gd o v.gd
+- 🌍 **Soporte multiidioma**: Soporte para 12 idiomas incluyendo español, chino, árabe, etc.
+- ✏️ **Alias personalizados**: Crea URLs cortas personalizadas con tus propios alias
+- 📊 **Seguimiento de estadísticas**: Opción para rastrear estadísticas de clics de tus URLs acortadas
+- 🎨 **Múltiples formatos**: Elige entre formatos estándar, minúsculas o pronunciables
+- 📋 **Copia con un clic**: Copia URLs acortadas al portapapeles instantáneamente
+- 🎯 **Detección automática de URL**: Carga automáticamente la URL de la pestaña actual al abrir
+- 🖱️ **Menú contextual**: Clic derecho en cualquier enlace o página para acortarlo
+- ⚡ Rápido y ligero con diseño de interfaz de usuario moderno y responsivo
+
+---
+
+## Funktionen (Deutsch)
+
+- 🔗 **URL-Verkürzung**: Verkürzen Sie lange URLs schnell mit den Diensten is.gd oder v.gd
+- 🌍 **Mehrsprachige Unterstützung**: Unterstützung für 12 Sprachen einschließlich Deutsch, Chinesisch, Arabisch, etc.
+- ✏️ **Benutzerdefinierte Aliase**: Erstellen Sie benutzerdefinierte kurze URLs mit Ihren eigenen Aliasen
+- 📊 **Statistikverfolgung**: Option zur Verfolgung von Klickstatistiken für Ihre verkürzten URLs
+- 🎨 **Mehrere Formate**: Wählen Sie zwischen Standard-, Kleinbuchstaben- oder aussprechbaren Formaten
+- 📋 **Ein-Klick-Kopieren**: Kopieren Sie verkürzte URLs sofort in die Zwischenablage
+- 🎯 **Automatische URL-Erkennung**: Lädt automatisch die URL des aktuellen Tabs beim Öffnen
+- 🖱️ **Kontextmenü**: Rechtsklick auf jeden Link oder jede Seite zum Verkürzen
+- ⚡ Schnell und leichtgewichtig mit modernem, responsivem UI-Design
+
+---
+
+## Особенности (Русский)
+
+- 🔗 **Сокращение URL**: Быстро сокращайте длинные URL с помощью сервисов is.gd или v.gd
+- 🌍 **Многоязычная поддержка**: Поддержка 12 языков, включая русский, китайский, арабский и др.
+- ✏️ **Пользовательские псевдонимы**: Создавайте пользовательские короткие URL с собственными псевдонимами
+- 📊 **Отслеживание статистики**: Опция отслеживания статистики кликов для ваших сокращенных URL
+- 🎨 **Множественные форматы**: Выбирайте между стандартным, строчным или произносимым форматами
+- 📋 **Копирование одним кликом**: Мгновенно копируйте сокращенные URL в буфер обмена
+- 🎯 **Автоматическое определение URL**: Автоматически загружает URL текущей вкладки при открытии
+- 🖱️ **Контекстное меню**: Правый клик на любой ссылке или странице для сокращения
+- ⚡ Быстрое и легкое с современным отзывчивым дизайном интерфейса
+
+## Table of Contents
+
+- [Features (English)](#features)
+- [特性 (中文)](#特性-中文)
+- [機能 (日本語)](#機能-日本語)
+- [Fonctionnalités (Français)](#fonctionnalités-français)
+- [Características (Español)](#características-español)
+- [Funktionen (Deutsch)](#funktionen-deutsch)
+- [Особенности (Русский)](#особенности-русский)
+- [Language Support](#language-support)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Services](#api-services)
+- [Development](#development)
+- [Contributing](#contributing)
+
 ## Language Support
 
-The extension supports multiple languages with automatic detection:
+The extension supports 12 languages with automatic detection based on your browser's locale:
 
-- **English** (default)
-- **中文** (Chinese Simplified)
-- **日本語** (Japanese)  
-- **Tiếng Việt** (Vietnamese)
+- **English** (en) - Default
+- **العربية** (ar) - Arabic
+- **Deutsch** (de) - German
+- **Español** (es) - Spanish
+- **Français** (fr) - French
+- **हिन्दी** (hi) - Hindi
+- **Italiano** (it) - Italian
+- **日本語** (ja) - Japanese
+- **Português** (pt) - Portuguese
+- **Русский** (ru) - Russian
+- **Tiếng Việt** (vi) - Vietnamese
+- **中文** (zh) - Chinese Simplified
 
 You can manually change the language using the language selector in the top-right corner of the extension popup. Your language preference is saved and synced across your Chrome browsers.
 
@@ -125,13 +243,18 @@ Convert the SVG icon to PNG format in multiple sizes:
 
 ### Adding New Languages
 
-To add support for a new language:
+The extension currently supports 12 languages. To add support for additional languages:
 
-1. Create a new folder in `_locales/` with the language code (e.g., `fr` for French)
+1. Create a new folder in `_locales/` with the appropriate language code (e.g., `ko` for Korean, `tr` for Turkish)
 2. Copy `_locales/en/messages.json` to the new folder
 3. Translate all message values while keeping the keys unchanged
 4. Add the new language option to the language selector in `popup.html`
 5. Test the new language thoroughly
+
+**Currently supported languages:**
+- Arabic (ar), German (de), English (en), Spanish (es), French (fr)
+- Hindi (hi), Italian (it), Japanese (ja), Portuguese (pt), Russian (ru)
+- Vietnamese (vi), Chinese Simplified (zh)
 
 ### File Structure
 
@@ -143,9 +266,17 @@ To add support for a new language:
 ├── background.js          # Background script with i18n context menu
 ├── _locales/              # Internationalization files
 │   ├── en/messages.json   # English translations (default)
-│   ├── zh/messages.json   # Chinese translations
+│   ├── ar/messages.json   # Arabic translations
+│   ├── de/messages.json   # German translations
+│   ├── es/messages.json   # Spanish translations
+│   ├── fr/messages.json   # French translations
+│   ├── hi/messages.json   # Hindi translations
+│   ├── it/messages.json   # Italian translations
 │   ├── ja/messages.json   # Japanese translations
-│   └── vi/messages.json   # Vietnamese translations
+│   ├── pt/messages.json   # Portuguese translations
+│   ├── ru/messages.json   # Russian translations
+│   ├── vi/messages.json   # Vietnamese translations
+│   └── zh/messages.json   # Chinese translations
 └── icons/                 # Extension icons
 ```
 
