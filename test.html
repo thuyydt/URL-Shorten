@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener Extension - Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .test-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .test-urls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .test-url {
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            word-break: break-all;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0066cc;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔗 URL Shortener Extension</h1>
+        <p>Test page for Chrome extension development</p>
+    </div>
+
+    <div class="instructions">
+        <h2>📋 Installation Instructions</h2>
+        <ol>
+            <li>Open Chrome and go to <code>chrome://extensions/</code></li>
+            <li>Enable "Developer mode" in the top right</li>
+            <li>Click "Load unpacked" and select the extension folder</li>
+            <li>The extension icon should appear in your toolbar</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>🧪 Test the Extension</h2>
+        <p>Use these sample URLs to test the extension functionality:</p>
+        
+        <div class="test-urls">
+            <div class="test-url">
+                <strong>Long URL:</strong><br>
+                https://www.example.com/very/long/path/with/many/parameters?param1=value1&param2=value2&param3=value3
+            </div>
+            <div class="test-url">
+                <strong>GitHub URL:</strong><br>
+                https://github.com/user/repository/blob/main/src/components/VeryLongFileName.js
+            </div>
+            <div class="test-url">
+                <strong>Documentation:</strong><br>
+                https://developer.mozilla.org/en-US/docs/Web/API/Chrome_Extensions_API
+            </div>
+            <div class="test-url">
+                <strong>Stack Overflow:</strong><br>
+                https://stackoverflow.com/questions/12345678/how-to-create-chrome-extension-with-manifest-v3
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🎯 Testing Checklist</h2>
+        <ul>
+            <li>✅ Click extension icon to open popup</li>
+            <li>✅ Auto-load current tab URL</li>
+            <li>✅ Switch between is.gd and v.gd services</li>
+            <li>✅ Test custom alias functionality</li>
+            <li>✅ Right-click links to use context menu</li>
+            <li>✅ Copy shortened URL to clipboard</li>
+            <li>✅ Test error handling with invalid URLs</li>
+            <li>✅ Test responsive design</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🔧 Development Notes</h2>
+        <p><strong>Icons:</strong> Convert the SVG icon to PNG format in multiple sizes (16, 32, 48, 128px)</p>
+        <p><strong>Permissions:</strong> The extension requests minimal permissions for security</p>
+        <p><strong>API Services:</strong> Uses is.gd and v.gd free URL shortening services</p>
+        <p><strong>Privacy:</strong> No user data is collected or stored</p>
+    </div>
+
+    <div class="success">
+        <strong>🎉 Extension Created Successfully!</strong><br>
+        Your Chrome extension is ready for testing. Load it in developer mode and start shortening URLs!
+    </div>
+
+    <script>
+        // Add some interactivity for testing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Right-click context menu test
+            document.addEventListener('contextmenu', function(e) {
+                console.log('Right-clicked on:', e.target.textContent.substring(0, 50) + '...');
+            });
+        });
+    </script>
+</body>
+</html>
