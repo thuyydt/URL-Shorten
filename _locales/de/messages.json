@@ -20,7 +20,7 @@
     "description": "Placeholder for URL input"
   },
   "chooseService": {
-    "message": "URL-Kürzungsdienst wählen:",
+    "message": "URL-Kürzungsdienst wählen",
     "description": "Label for service selection"
   },
   "aboutServices": {

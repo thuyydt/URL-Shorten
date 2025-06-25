@@ -20,7 +20,7 @@
     "description": "Placeholder for URL input"
   },
   "chooseService": {
-    "message": "选择 URL 缩短服务：",
+    "message": "选择 URL 缩短服务",
     "description": "Label for service selection"
   },
   "aboutServices": {

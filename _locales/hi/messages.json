@@ -20,7 +20,7 @@
     "description": "Placeholder for URL input"
   },
   "chooseService": {
-    "message": "URL छोटा करने की सेवा चुनें:",
+    "message": "URL छोटा करने की सेवा चुनें",
     "description": "Label for service selection"
   },
   "aboutServices": {

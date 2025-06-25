@@ -20,7 +20,7 @@
     "description": "Placeholder for URL input"
   },
   "chooseService": {
-    "message": "Elige el servicio de acortamiento de URL:",
+    "message": "Elige el servicio de acortamiento de URL",
     "description": "Label for service selection"
   },
   "aboutServices": {

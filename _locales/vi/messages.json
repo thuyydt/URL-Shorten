@@ -20,7 +20,7 @@
     "description": "Placeholder for URL input"
   },
   "chooseService": {
-    "message": "Chọn dịch vụ rút gọn URL:",
+    "message": "Chọn dịch vụ rút gọn URL",
     "description": "Label for service selection"
   },
   "aboutServices": {

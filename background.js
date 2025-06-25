@@ -1,13 +1,66 @@
 // Background script for URL Shorten extension
 
-chrome.runtime.onInstalled.addListener(() => {
-    // Create context menu item
+// Background script for URL Shorten extension
+
+chrome.runtime.onInstalled.addListener(async () => {
+    // Get or detect the user's language preference
+    const result = await chrome.storage.sync.get(['selectedLanguage']);
+    let language = result.selectedLanguage;
+    
+    // If no stored language, detect browser language
+    if (!language) {
+        language = detectBrowserLanguage();
+        // Save the detected language
+        chrome.storage.sync.set({ selectedLanguage: language });
+    }
+    
+    // Create context menu item with localized text
+    const contextMenuTitle = chrome.i18n.getMessage('contextMenuShorten') || 'Shorten this URL';
+    
     chrome.contextMenus.create({
         id: 'shortenUrl',
-        title: chrome.i18n.getMessage('contextMenuShorten') || 'Shorten this URL',
+        title: contextMenuTitle,
         contexts: ['link', 'page']
     });
 });
+
+function detectBrowserLanguage() {
+    // Get browser language with fallbacks
+    const browserLang = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
+    
+    if (!browserLang) {
+        return 'en'; // Ultimate fallback
+    }
+    
+    // Extract language code (e.g., 'en-US' -> 'en', 'zh-CN' -> 'zh')
+    const langCode = browserLang.split('-')[0].toLowerCase();
+    
+    // Available languages in the extension
+    const availableLanguages = ['en', 'zh', 'ja', 'vi', 'de', 'fr', 'es', 'it', 'pt', 'ru', 'ar', 'hi'];
+    
+    // Check if detected language is available
+    if (availableLanguages.includes(langCode)) {
+        return langCode;
+    }
+    
+    // Special cases for language variations
+    const languageMap = {
+        'zh-cn': 'zh',
+        'zh-tw': 'zh',
+        'zh-hk': 'zh',
+        'zh-sg': 'zh',
+        'pt-br': 'pt',
+        'pt-pt': 'pt'
+    };
+    
+    const fullLangCode = browserLang.toLowerCase();
+    if (languageMap[fullLangCode]) {
+        return languageMap[fullLangCode];
+    }
+    
+    // Fallback to English if language not supported
+    return 'en';
+}
 
 // Handle context menu clicks
 chrome.contextMenus.onClicked.addListener((info, tab) => {

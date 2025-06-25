@@ -20,7 +20,7 @@
     "description": "Placeholder for URL input"
   },
   "chooseService": {
-    "message": "اختر خدمة اختصار الروابط:",
+    "message": "اختر خدمة اختصار الروابط",
     "description": "Label for service selection"
   },
   "aboutServices": {

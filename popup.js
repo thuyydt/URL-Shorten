@@ -44,10 +44,58 @@ document.addEventListener('DOMContentLoaded', function() {
     async function getCurrentLanguage() {
         const stored = await new Promise((resolve) => {
             chrome.storage.sync.get(['selectedLanguage'], (result) => {
-                resolve(result.selectedLanguage || 'en');
+                resolve(result.selectedLanguage);
             });
         });
+        
+        // If no stored language preference, detect browser language
+        if (!stored) {
+            const browserLanguage = detectBrowserLanguage();
+            return browserLanguage;
+        }
+        
         return stored;
+    }
+    
+    function detectBrowserLanguage() {
+        // Get browser language with fallbacks
+        const browserLang = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
+        
+        if (!browserLang) {
+            return 'en'; // Ultimate fallback
+        }
+        
+        // Extract language code (e.g., 'en-US' -> 'en', 'zh-CN' -> 'zh')
+        const langCode = browserLang.split('-')[0].toLowerCase();
+        
+        // Available languages in the extension
+        const availableLanguages = ['en', 'zh', 'ja', 'vi', 'de', 'fr', 'es', 'it', 'pt', 'ru', 'ar', 'hi'];
+        
+        // Check if detected language is available
+        if (availableLanguages.includes(langCode)) {
+            console.log(`Detected browser language: ${browserLang}, using: ${langCode}`);
+            return langCode;
+        }
+        
+        // Special cases for language variations
+        const languageMap = {
+            'zh-cn': 'zh',
+            'zh-tw': 'zh',
+            'zh-hk': 'zh',
+            'zh-sg': 'zh',
+            'pt-br': 'pt',
+            'pt-pt': 'pt'
+        };
+        
+        const fullLangCode = browserLang.toLowerCase();
+        if (languageMap[fullLangCode]) {
+            console.log(`Detected browser language variant: ${browserLang}, using: ${languageMap[fullLangCode]}`);
+            return languageMap[fullLangCode];
+        }
+        
+        console.log(`Browser language ${browserLang} not supported, falling back to English`);
+        // Fallback to English if language not supported
+        return 'en';
     }
 
     async function getMessages(lang) {
@@ -93,7 +141,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function loadLanguagePreference() {
         chrome.storage.sync.get(['selectedLanguage'], (result) => {
-            currentLanguage = result.selectedLanguage || 'en';
+            // If no stored preference, use browser language detection
+            if (!result.selectedLanguage) {
+                currentLanguage = detectBrowserLanguage();
+                // Save the detected language as the user's preference
+                chrome.storage.sync.set({ selectedLanguage: currentLanguage });
+            } else {
+                currentLanguage = result.selectedLanguage;
+            }
+            
             if (languageSelect) {
                 languageSelect.value = currentLanguage;
             }
