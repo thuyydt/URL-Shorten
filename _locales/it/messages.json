@@ -135,6 +135,22 @@
     "message": "Impossibile copiare negli appunti",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "Nessuna connessione internet. Controlla la connessione e riprova.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Il servizio di accorciamento URL non è disponibile. Riprova più tardi.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Richiesta scaduta. Controlla la connessione e riprova.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Il servizio di accorciamento ha restituito un errore. Riprova.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Ignora errore",
     "description": "Tooltip for error dismiss button"

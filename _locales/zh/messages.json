@@ -135,6 +135,22 @@
     "message": "复制到剪贴板失败",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "无网络连接。请检查您的连接并重试。",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "URL 缩短服务当前不可用。请稍后重试。",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "请求超时。请检查您的连接并重试。",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "URL 缩短服务返回错误。请重试。",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "关闭错误",
     "description": "Tooltip for error dismiss button"

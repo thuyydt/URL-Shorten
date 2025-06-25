@@ -135,6 +135,22 @@
     "message": "Không thể sao chép vào clipboard",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "Không có kết nối internet. Vui lòng kiểm tra kết nối và thử lại.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Dịch vụ rút gọn URL hiện không khả dụng. Vui lòng thử lại sau.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Yêu cầu hết thời gian chờ. Vui lòng kiểm tra kết nối và thử lại.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Dịch vụ rút gọn trả về lỗi. Vui lòng thử lại.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Đóng lỗi",
     "description": "Tooltip for error dismiss button"

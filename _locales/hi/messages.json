@@ -132,8 +132,24 @@
     "description": "Generic error message"
   },
   "errorCopyFailed": {
-    "message": "क्लिपबोर्ड में कॉपी करने में विफल",
+    "message": "क्लिपबोर्ड में कॉपी करना विफल",
     "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "इंटरनेट कनेक्शन नहीं है। कृपया अपना कनेक्शन जांचें और पुनः प्रयास करें।",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "URL छोटा करने की सेवा अभी उपलब्ध नहीं है। कृपया बाद में प्रयास करें।",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "अनुरोध का समय समाप्त हो गया। कृपया अपना कनेक्शन जांचें और पुनः प्रयास करें।",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "छोटा करने की सेवा ने एक त्रुटि वापस की। कृपया पुनः प्रयास करें।",
+    "description": "Error message for service-specific errors"
   },
   "dismissError": {
     "message": "त्रुटि खारिज करें",

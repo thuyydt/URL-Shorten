@@ -351,33 +351,96 @@ document.addEventListener('DOMContentLoaded', function() {
             params.append('opt_logstats', '1');
         }
 
-        const response = await fetch(baseUrl, {
-            method: 'POST',
-            headers: {
-                'Accept': 'text/plain, */*',
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'User-Agent': 'URL Shorten Chrome Extension'
-            },
-            body: params.toString()
-        });
+        try {
+            // Add timeout to the fetch request
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
 
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`HTTP error! status: ${response.status}${errorText ? ': ' + errorText : ''}`);
+            const response = await fetch(baseUrl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'text/plain, */*',
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'User-Agent': 'URL Shorten Chrome Extension'
+                },
+                body: params.toString(),
+                signal: controller.signal
+            });
+
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                // Handle specific HTTP status codes
+                if (response.status >= 500 && response.status < 600) {
+                    throw new Error(getMessage('errorServiceUnavailable'));
+                } else if (response.status === 429) {
+                    throw new Error('Rate limit exceeded. Please wait a moment and try again.');
+                } else if (response.status === 403) {
+                    throw new Error('Access denied by the service. Please try again later.');
+                } else if (response.status >= 400 && response.status < 500) {
+                    const errorText = await response.text().catch(() => '');
+                    throw new Error(errorText || `Client error (${response.status}). Please check your request.`);
+                } else {
+                    const errorText = await response.text().catch(() => '');
+                    throw new Error(getMessage('errorServiceError') + (errorText ? ': ' + errorText : ''));
+                }
+            }
+
+            const result = await response.text();
+            
+            // Check for error responses from the service
+            if (result.includes('Error:')) {
+                const errorMessage = result.replace('Error: ', '').trim();
+                // Handle common service errors
+                if (errorMessage.toLowerCase().includes('invalid url')) {
+                    throw new Error(getMessage('errorValidUrl'));
+                } else if (errorMessage.toLowerCase().includes('custom url already taken') || errorMessage.toLowerCase().includes('keyword unavailable')) {
+                    throw new Error('The custom alias is already taken. Please choose a different one.');
+                } else if (errorMessage.toLowerCase().includes('rate limit') || errorMessage.toLowerCase().includes('too many requests')) {
+                    throw new Error('Rate limit exceeded. Please wait a moment and try again.');
+                } else {
+                    throw new Error(errorMessage);
+                }
+            }
+
+            // Check for other error indicators
+            if (result.toLowerCase().includes('error') && !result.startsWith('http')) {
+                throw new Error(getMessage('errorServiceError'));
+            }
+
+            if (!result.startsWith('http')) {
+                throw new Error('Invalid response from service. Please try again.');
+            }
+
+            return result.trim();
+
+        } catch (error) {
+            // Handle network-specific errors
+            if (error.name === 'AbortError') {
+                throw new Error(getMessage('errorNetworkTimeout'));
+            } else if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                // Network connectivity issues
+                throw new Error(getMessage('errorNoConnection'));
+            } else if (error.name === 'TypeError' && (
+                error.message.includes('NetworkError') || 
+                error.message.includes('Failed to fetch') ||
+                error.message.includes('Load failed')
+            )) {
+                throw new Error(getMessage('errorNoConnection'));
+            } else if (error.message && (
+                error.message.includes('No internet connection') ||
+                error.message.includes('service is currently unavailable') ||
+                error.message.includes('Request timed out') ||
+                error.message.includes('service returned an error')
+            )) {
+                // Re-throw our custom error messages
+                throw error;
+            } else {
+                // For any other errors, provide a generic fallback
+                console.error('Unexpected error in shortenUrl:', error);
+                throw new Error(error.message || getMessage('errorShortenFailed'));
+            }
         }
-
-        const result = await response.text();
-        
-        // Check for error responses
-        if (result.includes('Error:') || result.includes('error')) {
-            throw new Error(result.replace('Error: ', ''));
-        }
-
-        if (!result.startsWith('http')) {
-            throw new Error('Invalid response from service');
-        }
-
-        return result.trim();
     }
 
     function getShortenOptions() {
@@ -443,10 +506,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function hideError() {
-        error.classList.remove('visible');
         // Clear content after transition
         setTimeout(() => {
-            error.innerHTML = '';
-        }, 300);
+            error.classList.remove('visible');
+            setTimeout(() => {
+                error.innerHTML = '';
+            }, 300);
+        }, 3000);
     }
 });

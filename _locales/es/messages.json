@@ -135,6 +135,22 @@
     "message": "Error al copiar al portapapeles",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "Sin conexión a internet. Verifica tu conexión e inténtalo de nuevo.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "El servicio de acortamiento no está disponible. Inténtalo más tarde.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Tiempo de espera agotado. Verifica tu conexión e inténtalo de nuevo.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "El servicio de acortamiento devolvió un error. Inténtalo de nuevo.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Descartar error",
     "description": "Tooltip for error dismiss button"

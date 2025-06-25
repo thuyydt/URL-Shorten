@@ -132,8 +132,24 @@
     "description": "Generic error message"
   },
   "errorCopyFailed": {
-    "message": "Не удалось скопировать в буфер обмена",
+    "message": "Ошибка копирования в буфер обмена",
     "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "Нет подключения к интернету. Проверьте соединение и попробуйте снова.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Сервис сокращения URL недоступен. Попробуйте позже.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Превышено время ожидания запроса. Проверьте соединение и попробуйте снова.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Сервис сокращения вернул ошибку. Попробуйте снова.",
+    "description": "Error message for service-specific errors"
   },
   "dismissError": {
     "message": "Закрыть ошибку",

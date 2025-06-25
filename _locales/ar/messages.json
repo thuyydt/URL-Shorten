@@ -132,8 +132,24 @@
     "description": "Generic error message"
   },
   "errorCopyFailed": {
-    "message": "فشل في النسخ إلى الحافظة",
+    "message": "فشل النسخ إلى الحافظة",
     "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "لا يوجد اتصال بالإنترنت. يرجى التحقق من الاتصال والمحاولة مرة أخرى.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "خدمة اختصار الروابط غير متاحة حالياً. يرجى المحاولة لاحقاً.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "انتهت مهلة الطلب. يرجى التحقق من الاتصال والمحاولة مرة أخرى.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "أرجعت خدمة الاختصار خطأ. يرجى المحاولة مرة أخرى.",
+    "description": "Error message for service-specific errors"
   },
   "dismissError": {
     "message": "تجاهل الخطأ",

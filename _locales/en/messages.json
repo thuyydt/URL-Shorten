@@ -135,6 +135,22 @@
     "message": "Failed to copy to clipboard",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "No internet connection. Please check your connection and try again.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "The shortening service is currently unavailable. Please try again later.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Request timed out. Please check your connection and try again.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "The shortening service returned an error. Please try again.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Dismiss error",
     "description": "Tooltip for error dismiss button"

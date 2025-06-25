@@ -135,6 +135,22 @@
     "message": "Falha ao copiar para a área de transferência",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "Sem conexão com a internet. Verifique sua conexão e tente novamente.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "O serviço de encurtamento de URL está indisponível. Tente novamente mais tarde.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Tempo limite da solicitação. Verifique sua conexão e tente novamente.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "O serviço de encurtamento retornou um erro. Tente novamente.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Descartar erro",
     "description": "Tooltip for error dismiss button"

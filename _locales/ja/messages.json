@@ -135,6 +135,22 @@
     "message": "クリップボードへのコピーに失敗しました",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "インターネット接続がありません。接続を確認して再試行してください。",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "URL短縮サービスが現在利用できません。後でもう一度お試しください。",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "リクエストがタイムアウトしました。接続を確認して再試行してください。",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "URL短縮サービスがエラーを返しました。再試行してください。",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "エラーを閉じる",
     "description": "Tooltip for error dismiss button"

@@ -135,6 +135,22 @@
     "message": "Échec de la copie dans le presse-papiers",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "Pas de connexion internet. Vérifiez votre connexion et réessayez.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Le service de raccourcissement n'est pas disponible. Réessayez plus tard.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Délai d'attente dépassé. Vérifiez votre connexion et réessayez.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Le service de raccourcissement a renvoyé une erreur. Réessayez.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Ignorer l'erreur",
     "description": "Tooltip for error dismiss button"

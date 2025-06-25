@@ -135,6 +135,22 @@
     "message": "Kopieren in Zwischenablage fehlgeschlagen",
     "description": "Error message for copy failure"
   },
+  "errorNoConnection": {
+    "message": "Keine Internetverbindung. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Der URL-Kürzungsdienst ist derzeit nicht verfügbar. Versuchen Sie es später erneut.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Zeitüberschreitung der Anfrage. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Der URL-Kürzungsdienst hat einen Fehler zurückgegeben. Versuchen Sie es erneut.",
+    "description": "Error message for service-specific errors"
+  },
   "dismissError": {
     "message": "Fehler verwerfen",
     "description": "Tooltip for error dismiss button"
