@@ -1,0 +1,206 @@
+{
+  "extensionName": {
+    "message": "Сократить URL",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Сокращение URL с помощью сервисов is.gd, v.gd или TinyURL",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "Сократить URL",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "Введите URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "Введите URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "Выберите сервис сокращения URL",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "Об этих сервисах",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "Дополнительные опции/пользовательский URL",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "Стандартный (по умолчанию)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "Строчные буквы",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "Строчные произносимые",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "Записывать статистику для этой ссылки",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "Пользовательский псевдоним (необязательно)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "Введите пользовательский псевдоним",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "Сократить!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "Сокращенный URL",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "Скопировать в буфер обмена",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "Сокращение URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "Справка и Информация",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "Закрыть",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd и v.gd - это сервисы сокращения URL, которые позволяют создавать короткие ссылки для удобного обмена.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd и is.gd - это родственные сервисы, но два отдельных сократителя URL. Они управляются одной командой и на одной платформе, поэтому их функциональность очень похожа. Основное различие между ними заключается в том, что v.gd по умолчанию отображает страницу предварительного просмотра ссылки, когда кто-то посещает один из ее сокращенных URL, но is.gd этого не делает (по умолчанию он отправляет людей прямо к месту назначения ссылки). По этой причине v.gd можно рассматривать как немного более \"безопасный\" вариант и он удобен для пользователей, которые всегда хотят знать, куда ведет ссылка, прежде чем нажать на нее.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "Вы можете сокращать URL длиной до 5000 символов.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "Вы можете создавать пользовательские псевдонимы для ваших сокращенных URL, но они должны быть уникальными и не использоваться ранее. Если вы оставите поле пользовательского псевдонима пустым, будет сгенерирован случайный псевдоним.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "Опция \"Записывать статистику для этой ссылки\" позволяет отслеживать количество кликов по вашему сокращенному URL. Если включена, вы можете просматривать эту статистику позже.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "Посетите страницу предварительного просмотра сокращенной ссылки, добавив тире (-) в конец ссылки или включив автоматические предварительные просмотры, а затем перейдя по ссылке. Оказавшись там, используйте опцию в нижней части страницы, которая говорит \"Я хочу посмотреть статистику для этой ссылки\".",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "Опция \"Тип сокращенной ссылки\" позволяет выбрать, как форматируется сокращенный URL. По умолчанию стандартный, но вы также можете выбрать форматы в нижнем регистре или произносимые.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "Сокращенные ссылки являются постоянными после создания. Основная причина, по которой мы не предлагаем это, заключается в том, что это может быть злоупотреблено (например, спамеры могут создавать безвредные ссылки, а затем направлять их куда-то вредоносное).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "Пользовательская часть URL (всё после https://is.gd/) должна быть от 5 до 30 символов в длину. Пользовательские URL чувствительны к регистру и могут состоять только из прописных и строчных букв, цифр и символа подчеркивания (_). Неанглийские символы не разрешены в пользовательских URL (но вы можете сокращать URL, содержащие их). У них нет других ограничений, и мы не планируем назначать себя моральными стражами Интернета, поэтому разрешены такие вещи, как грубые слова.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText10": {
+    "message": "TinyURL — еще один популярный сервис сокращения URL. Он работает с 2002 года и является одним из старейших сервисов сокращения ссылок в интернете. TinyURL не поддерживает пользовательские псевдонимы, параметры типа ссылки или отслеживание статистики через это расширение.",
+    "description": "Help text about TinyURL service"
+  },
+  "helpText9": {
+    "message": "Для получения дополнительной информации об этих сервисах посетите их веб-сайты.",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "Пожалуйста, введите URL для сокращения",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "Пожалуйста, введите действительный URL",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "Не удалось сократить URL",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "Ошибка копирования в буфер обмена",
+    "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "Нет подключения к интернету. Проверьте соединение и попробуйте снова.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Сервис сокращения URL недоступен. Попробуйте позже.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Превышено время ожидания запроса. Проверьте соединение и попробуйте снова.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Сервис сокращения вернул ошибку. Попробуйте снова.",
+    "description": "Error message for service-specific errors"
+  },
+  "dismissError": {
+    "message": "Закрыть ошибку",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "Язык",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "Сократить этот URL",
+    "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "Сервис испытывает проблемы с базой данных. Пожалуйста, попробуйте TinyURL.",
+    "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "История",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "Очистить",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "Сокращённых URL ещё нет",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "QR-код",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "Переключить тёмный режим",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "Не удалось сгенерировать QR-код",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "Удалить",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "Только что",
+    "description": "Relative time for recent items"
+  }
+}

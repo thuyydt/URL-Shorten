@@ -1,0 +1,206 @@
+{
+  "extensionName": {
+    "message": "URL短縮",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "is.gd、v.gd、またはTinyURLサービスを使用してURLを短縮",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "URL短縮",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "URLを入力",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "URLを入力",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "URL短縮サービスを選択",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "これらのサービスについて",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "詳細オプション/カスタムURL",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "標準（デフォルト）",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "小文字",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "小文字で発音しやすい",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "このリンクの統計を記録する",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "カスタムエイリアス（任意）",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "カスタムエイリアスを入力",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "短縮！",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "短縮されたURL",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "クリップボードにコピー",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "URLを短縮中...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "ヘルプと情報",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "閉じる",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd と v.gd は、共有しやすい短いリンクを作成できるURL短縮サービスです。",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd と is.gd は姉妹サービスですが、2つの独立したURL短縮器です。同じチームが運営し、同じプラットフォーム上で動作するため、機能は非常に似ています。主な違いは、短縮されたURLを誰かが訪問したときに、v.gd はデフォルトでリンクプレビューページを表示しますが、is.gd は表示しません（デフォルトではリンクの宛先に直接送信します）。このため、v.gd は少し安全なオプションと見なすことができ、クリックする前にリンクの行き先を常に知りたいユーザーに便利です。",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "最大5,000文字のURLを短縮できます。",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "短縮されたURLにカスタムエイリアスを作成できますが、一意で既に使用されていない必要があります。カスタムエイリアスフィールドを空のままにすると、ランダムなエイリアスが生成されます。",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "このリンクの統計を記録するオプションを使用すると、短縮されたURLのクリック数を追跡できます。有効にすると、後でこれらの統計を表示できます。",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "リンクの末尾にダッシュ（-）を追加するか、自動プレビューをオンにしてからリンクにアクセスして、短縮されたリンクのプレビューページにアクセスします。そこに着いたら、このリンクの統計を見たいと書かれたページの下部近くのオプションを使用します。",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "短縮リンクタイプオプションを使用すると、短縮されたURLのフォーマット方法を選択できます。デフォルトは標準ですが、小文字または発音しやすい形式も選択できます。",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "短縮されたリンクは一度作成すると永続的です。これを提供しない主な理由は、悪用される可能性があるためです（例：スパマーが無害なリンクを作成し、後で悪意のある場所にポイントする可能性があります）。",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "URLのカスタム部分（https://is.gd/以降のすべて）は5〜30文字の長さである必要があります。カスタムURLは大文字と小文字を区別し、大文字と小文字、数字、アンダースコア（_）記号のみで構成できます。カスタムURLでは英語以外の文字は許可されていません（ただし、それらを含むURLを短縮することはできます）。他の制限はなく、インターネットの道徳的な守護者に自分自身を任命する予定もないため、失礼な言葉などが許可されています。",
+    "description": "Help text paragraph 8"
+  },
+  "helpText10": {
+    "message": "TinyURLはもう一つの人気のあるURL短縮サービスです。2002年から運営されており、インターネット上で最も古いURL短縮サービスの一つです。TinyURLではこの拡張機能を通じてカスタムエイリアス、リンクタイプオプション、統計追跡はサポートされていません。",
+    "description": "Help text about TinyURL service"
+  },
+  "helpText9": {
+    "message": "これらのサービスの詳細については、それぞれのウェブサイトをご覧ください。",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "短縮するURLを入力してください",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "有効なURLを入力してください",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "URLの短縮に失敗しました",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "クリップボードへのコピーに失敗しました",
+    "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "インターネット接続がありません。接続を確認して再試行してください。",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "URL短縮サービスが現在利用できません。後でもう一度お試しください。",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "リクエストがタイムアウトしました。接続を確認して再試行してください。",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "URL短縮サービスがエラーを返しました。再試行してください。",
+    "description": "Error message for service-specific errors"
+  },
+  "dismissError": {
+    "message": "エラーを閉じる",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "言語",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "このURLを短縮",
+    "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "サービスのデータベースに問題が発生しています。TinyURLをお試しください。",
+    "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "履歴",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "消去",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "短縮URLはまだありません",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "QRコード",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "ダークモード切替",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "QRコードを生成できませんでした",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "削除",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "たった今",
+    "description": "Relative time for recent items"
+  }
+}

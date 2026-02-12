@@ -1,0 +1,206 @@
+{
+  "extensionName": {
+    "message": "Raccourcir URL",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Raccourcir les URL avec les services is.gd, v.gd ou TinyURL",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "Raccourcir URL",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "Entrer URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "Entrer URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "Choisir le service de raccourcissement d'URL",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "À propos de ces services",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "Options supplémentaires/URL personnalisée",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "Standard (par défaut)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "Minuscules",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "Minuscules prononçables",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "Enregistrer les statistiques pour ce lien",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "Alias personnalisé (optionnel)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "Entrer un alias personnalisé",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "Raccourcir !",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "URL raccourcie",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "Copier dans le presse-papiers",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "Raccourcissement de l'URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "Aide et Informations",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "Fermer",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd et v.gd sont des services de raccourcissement d'URLs qui vous permettent de créer des liens courts pour un partage plus facile.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd et is.gd sont des services sœurs, mais sont deux raccourcisseurs d'URL séparés. Ils sont gérés par la même équipe et sur la même plateforme, donc leur fonctionnalité est très similaire. La principale différence entre eux est que v.gd affiche une page d'aperçu de lien par défaut chaque fois que quelqu'un visite l'une de ses URLs raccourcies, mais is.gd ne le fait pas (par défaut, il envoie les gens directement à la destination du lien). Pour cette raison, v.gd peut être considéré comme une option légèrement plus \"sûre\" et est pratique pour les utilisateurs qui veulent toujours savoir où va un lien avant de cliquer dessus.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "Vous pouvez raccourcir des URLs jusqu'à 5 000 caractères de long.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "Vous pouvez créer des alias personnalisés pour vos URLs raccourcies, mais ils doivent être uniques et ne pas être déjà utilisés. Si vous laissez le champ d'alias personnalisé vide, un alias aléatoire sera généré.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "L'option \"Enregistrer les statistiques pour ce lien\" vous permet de suivre le nombre de clics sur votre URL raccourcie. Si activée, vous pouvez voir ces statistiques plus tard.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "Visitez la page d'aperçu du lien raccourci soit en ajoutant un tiret (-) à la fin du lien ou en activant les aperçus automatiques puis en visitant le lien. Une fois là, utilisez l'option près du bas de la page qui dit \"Je veux voir les statistiques pour ce lien\".",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "L'option \"Type de lien raccourci\" vous permet de choisir comment l'URL raccourcie est formatée. Le défaut est standard, mais vous pouvez aussi choisir des formats en minuscules ou prononçables.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "Les liens raccourcis sont permanents une fois créés. La principale raison pour laquelle nous n'offrons pas cela est que cela pourrait être abusé (par exemple, les spammeurs pourraient créer des liens innocents et plus tard les pointer vers quelque part de malveillant).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "La partie personnalisée de l'URL (tout après https://is.gd/) doit être entre 5 et 30 caractères de long. Les URLs personnalisées sont sensibles à la casse et ne peuvent être composées que de lettres majuscules et minuscules, de nombres et du symbole underscore (_). Les caractères non anglais ne sont pas autorisés dans les URLs personnalisées (mais vous pouvez raccourcir des URLs qui en contiennent). Ils n'ont pas d'autres restrictions et nous ne prévoyons pas de nous nommer gardiens moraux d'Internet, donc des choses comme les mots grossiers sont autorisés.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText10": {
+    "message": "TinyURL est un autre service populaire de raccourcissement d'URL. Il est en service depuis 2002 et est l'un des plus anciens raccourcisseurs d'URL sur Internet. TinyURL ne prend pas en charge les alias personnalisés, les options de type de lien ou le suivi des statistiques via cette extension.",
+    "description": "Help text about TinyURL service"
+  },
+  "helpText9": {
+    "message": "Pour plus d'informations sur ces services, vous pouvez visiter leurs sites respectifs.",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "Veuillez entrer une URL à raccourcir",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "Veuillez entrer une URL valide",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "Échec du raccourcissement de l'URL",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "Échec de la copie dans le presse-papiers",
+    "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "Pas de connexion internet. Vérifiez votre connexion et réessayez.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "Le service de raccourcissement n'est pas disponible. Réessayez plus tard.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Délai d'attente dépassé. Vérifiez votre connexion et réessayez.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "Le service de raccourcissement a renvoyé une erreur. Réessayez.",
+    "description": "Error message for service-specific errors"
+  },
+  "dismissError": {
+    "message": "Ignorer l'erreur",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "Langue",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "Raccourcir cette URL",
+    "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "Le service rencontre des problèmes de base de données. Veuillez essayer TinyURL.",
+    "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "Historique",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "Effacer",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "Aucune URL raccourcie",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "Code QR",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "Basculer le mode sombre",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "Impossible de générer le code QR",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "Supprimer",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "À l'instant",
+    "description": "Relative time for recent items"
+  }
+}

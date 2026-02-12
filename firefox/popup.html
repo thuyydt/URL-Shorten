@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorten URL</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <h1 data-i18n="title">URL Shorten</h1>
+          <div class="language-selector">
+            <label for="languageSelect" data-i18n="language">Language</label>
+            <select id="languageSelect">
+              <option value="en">English</option>
+              <option value="zh">中文</option>
+              <option value="ja">日本語</option>
+              <option value="vi">Tiếng Việt</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="es">Español</option>
+              <option value="it">Italiano</option>
+              <option value="pt">Português</option>
+              <option value="ru">Русский</option>
+              <option value="ar">العربية</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="url-section">
+            <label for="urlInput" data-i18n="enterUrl">Enter URL</label>
+            <div class="input-wrapper">
+                <input type="text" id="urlInput" data-i18n-placeholder="urlPlaceholder" placeholder="Enter URL">
+            </div>
+        </div>
+
+        <div class="service-section">
+            <label data-i18n="chooseService">Choose URL shortening service</label>
+            <div class="service-buttons">
+                <button id="isGdBtn" class="service-btn active" data-service="is.gd">
+                    <div class="service-content">is.gd</div>
+                </button>
+                <button id="vGdBtn" class="service-btn" data-service="v.gd">
+                    <div class="service-content">v.gd</div>
+                </button>
+                <button id="tinyUrlBtn" class="service-btn" data-service="tinyurl">
+                    <div class="service-content">TinyURL</div>
+                </button>
+                <button id="serviceInfoBtn" class="info-btn" data-i18n-title="aboutServices" title="About these services">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+                    <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>
+                  </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="options-section">
+            <label for="shortenType" data-i18n="furtherOptions">Further options/custom URL</label>
+            <select id="shortenType" name="shortenType">
+                <option value="standard" data-i18n="optionStandard">Standard (default)</option>
+                <option value="lowercase" data-i18n="optionLowercase">Lower case</option>
+                <option value="pronounceable" data-i18n="optionPronounceable">Lower case pronounceable</option>
+            </select>
+            
+            <label class="option-item checkbox-option">
+                <input type="checkbox" id="logStats" name="logStats">
+                <span class="option-text" data-i18n="logStats">Log statistics for this link</span>
+            </label>
+        </div>
+
+        <div class="custom-alias-section">
+            <label for="customAlias" data-i18n="customAlias">Custom alias (optional)</label>
+            <input type="text" id="customAlias" data-i18n-placeholder="customAliasPlaceholder" placeholder="Enter custom alias">
+        </div>
+
+        <button id="shortenBtn" class="shorten-btn" data-i18n="shortenButton">Shorten!</button>
+
+        <div id="result" class="result-section">
+          <label data-i18n="shortenedUrl">Shortened URL</label>
+          <div class="result-group">
+            <input type="text" id="resultUrl" readonly>
+            <button id="copyBtn" data-i18n-title="copyToClipboard" title="Copy to clipboard" class="action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+                <path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/>
+              </svg>
+            </button>
+            <button id="qrBtn" data-i18n-title="showQrCode" title="Show QR Code" class="action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+                <path d="M120-520v-320h320v320H120Zm80-80h160v-160H200v160Zm-80 480v-320h320v320H120Zm80-80h160v-160H200v160Zm320-320v-320h320v320H520Zm80-80h160v-160H600v160ZM760-120v-80h80v80h-80Zm-240-160v-80h80v80h-80Zm80 80v-80h80v80h-80Zm-80 80v-80h80v80h-80Zm80 80v-80h80v80h-80Zm80-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm80 80v-80h80v80h-80Z"/>
+              </svg>
+            </button>
+          </div>
+          <div id="qrCodeContainer" class="qr-code-container"></div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#667eea">
+                    <path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-156t86-127Q252-817 325-848.5T480-880q17 0 28.5 11.5T520-840q0 17-11.5 28.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-17 11.5-28.5T840-520q17 0 28.5 11.5T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127.5 86T480-80Z"/>
+                </svg>
+            </div>
+            <span data-i18n="shorteningUrl">Shortening URL...</span>
+        </div>
+
+        <div id="error" class="error"></div>
+
+        <!-- History section -->
+        <div class="history-section">
+          <div class="history-header">
+            <label data-i18n="history">History</label>
+            <button id="clearHistoryBtn" class="clear-history-btn" data-i18n-title="clearHistory" title="Clear history">
+              <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="currentColor">
+                <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+              </svg>
+            </button>
+          </div>
+          <div id="historyList" class="history-list">
+            <div class="history-empty" data-i18n="historyEmpty">No history yet</div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Dark mode toggle (floating) -->
+    <button id="darkModeToggle" class="dark-mode-toggle" data-i18n-title="toggleDarkMode" title="Toggle dark mode">
+      <svg id="darkModeIcon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+        <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+      </svg>
+    </button>
+
+    <!-- Modal overlay for service info -->
+    <div id="serviceInfoModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h2 data-i18n="helpInfo">Help & Information</h2>
+              <button id="closeModal" class="close-btn" data-i18n-title="close" title="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p data-i18n="helpText1">
+                  is.gd and v.gd are URL shortening services that allow you to create short links for easier sharing.
+                </p>
+                <p data-i18n="helpText2">
+                  v.gd and is.gd are sister services, but are two separate URL Shorten. They're run by the same team and on the same platform, so their functionality is very similar. The main difference between them is that v.gd displays a link preview page by default whenever somebody visits one of its shortened URLs, but is.gd doesn't (by default it sends people straight to the link's destination). For this reason v.gd can be seen as a slightly "safer" option and is handy for users who always want to know where a link goes before clicking it.
+                </p>
+                <p data-i18n="helpText3">
+                  You can shorten URLs up to 5,000 characters long.
+                </p>
+                <p data-i18n="helpText4">
+                  You can create custom aliases for your shortened URLs, but they must be unique and not already in use. If you leave the custom alias field empty, a random alias will be generated.
+                </p>
+                <p data-i18n="helpText5">
+                  The "Log statistics for this link" option allows you to track the number of clicks on your shortened URL. If enabled, you can view these statistics later.
+                  <br>
+                  <span data-i18n="helpText5Additional">Visit the shortened link's preview page either by adding a dash (-) to the end of the link or by turning on automatic previews then visiting the link. Once there use the option near the bottom of the page that says "I want to see statistics for this link".</span>
+                </p>
+                <p data-i18n="helpText6">
+                  The "Shorten link type" option allows you to choose how the shortened URL is formatted. The default is standard, but you can also choose lowercase or pronounceable formats.
+                </p>
+                <p data-i18n="helpText7">
+                  The shortened links are permanent once created. The main reason that we don't offer this is that it could be abused (e.g. spammers could create innocuous links and later point them somewhere malicious).
+                </p>
+                <p data-i18n="helpText8">
+                  The custom part of the URL (everything after https://is.gd/) must be between 5 and 30 characters long. Custom URLs are case sensitive and can only consist of upper and lower case letters, numbers and the underscore (_) symbol. Non-English characters aren't allowed in custom URLs (but you can shorten URLs containing them). They don't have any other restrictions and don't plan to appoint ourselves the moral guardians of the Internet, so things like rude words are allowed.
+                </p>
+                <hr style="border: none; border-top: 1px solid #e1e5e9; margin: 16px 0;">
+                <p data-i18n="helpText10">
+                  TinyURL is another popular URL shortening service. It has been operating since 2002 and is one of the oldest URL shorteners on the internet. TinyURL does not support custom aliases, link type options, or statistics tracking through this extension.
+                </p>
+                <p data-i18n="helpText9">
+                  For more information about these services, you can visit their respective websites:
+                  <br>
+                  <a href="https://is.gd" target="_blank">is.gd</a>
+                  <br>
+                  <a href="https://v.gd" target="_blank">v.gd</a>
+                  <br>
+                  <a href="https://tinyurl.com" target="_blank">tinyurl.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

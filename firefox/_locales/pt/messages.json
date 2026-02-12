@@ -1,0 +1,206 @@
+{
+  "extensionName": {
+    "message": "Encurtar URL",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Encurtar URLs usando os serviços is.gd, v.gd ou TinyURL",
+    "description": "Extension description"
+  },
+  "title": {
+    "message": "Encurtar URL",
+    "description": "Main title"
+  },
+  "enterUrl": {
+    "message": "Digite URL",
+    "description": "Label for URL input"
+  },
+  "urlPlaceholder": {
+    "message": "Digite URL",
+    "description": "Placeholder for URL input"
+  },
+  "chooseService": {
+    "message": "Escolha o serviço de encurtamento de URL",
+    "description": "Label for service selection"
+  },
+  "aboutServices": {
+    "message": "Sobre estes serviços",
+    "description": "Tooltip for info button"
+  },
+  "furtherOptions": {
+    "message": "Opções adicionais/URL personalizada",
+    "description": "Label for options section"
+  },
+  "optionStandard": {
+    "message": "Padrão (padrão)",
+    "description": "Standard option"
+  },
+  "optionLowercase": {
+    "message": "Minúsculas",
+    "description": "Lowercase option"
+  },
+  "optionPronounceable": {
+    "message": "Minúsculas pronunciáveis",
+    "description": "Pronounceable option"
+  },
+  "logStats": {
+    "message": "Registar estatísticas para este link",
+    "description": "Checkbox option for logging stats"
+  },
+  "customAlias": {
+    "message": "Alias personalizado (opcional)",
+    "description": "Label for custom alias input"
+  },
+  "customAliasPlaceholder": {
+    "message": "Digite alias personalizado",
+    "description": "Placeholder for custom alias input"
+  },
+  "shortenButton": {
+    "message": "Encurtar!",
+    "description": "Shorten button text"
+  },
+  "shortenedUrl": {
+    "message": "URL encurtada",
+    "description": "Label for result"
+  },
+  "copyToClipboard": {
+    "message": "Copiar para a área de transferência",
+    "description": "Copy button tooltip"
+  },
+  "shorteningUrl": {
+    "message": "Encurtando URL...",
+    "description": "Loading message"
+  },
+  "helpInfo": {
+    "message": "Ajuda e Informações",
+    "description": "Modal title"
+  },
+  "close": {
+    "message": "Fechar",
+    "description": "Close button tooltip"
+  },
+  "helpText1": {
+    "message": "is.gd e v.gd são serviços de encurtamento de URLs que permitem criar links curtos para partilha mais fácil.",
+    "description": "Help text paragraph 1"
+  },
+  "helpText2": {
+    "message": "v.gd e is.gd são serviços irmãos, mas são dois encurtadores de URL separados. São geridos pela mesma equipa e na mesma plataforma, por isso a sua funcionalidade é muito semelhante. A principal diferença entre eles é que o v.gd exibe uma página de pré-visualização do link por padrão sempre que alguém visita uma das suas URLs encurtadas, mas o is.gd não (por padrão envia as pessoas diretamente para o destino do link). Por esta razão, o v.gd pode ser visto como uma opção ligeiramente mais \"segura\" e é útil para utilizadores que sempre querem saber para onde vai um link antes de clicar nele.",
+    "description": "Help text paragraph 2"
+  },
+  "helpText3": {
+    "message": "Pode encurtar URLs com até 5.000 caracteres de comprimento.",
+    "description": "Help text paragraph 3"
+  },
+  "helpText4": {
+    "message": "Pode criar aliases personalizados para as suas URLs encurtadas, mas devem ser únicos e não estar já em uso. Se deixar o campo de alias personalizado vazio, será gerado um alias aleatório.",
+    "description": "Help text paragraph 4"
+  },
+  "helpText5": {
+    "message": "A opção \"Registar estatísticas para este link\" permite rastrear o número de cliques na sua URL encurtada. Se ativada, pode visualizar essas estatísticas mais tarde.",
+    "description": "Help text paragraph 5"
+  },
+  "helpText5Additional": {
+    "message": "Visite a página de pré-visualização do link encurtado adicionando um traço (-) ao final do link ou ativando as pré-visualizações automáticas e depois visitando o link. Uma vez lá, use a opção perto da parte inferior da página que diz \"Quero ver estatísticas para este link\".",
+    "description": "Help text paragraph 5 additional info"
+  },
+  "helpText6": {
+    "message": "A opção \"Tipo de link encurtado\" permite escolher como a URL encurtada é formatada. O padrão é standard, mas também pode escolher formatos em minúsculas ou pronunciáveis.",
+    "description": "Help text paragraph 6"
+  },
+  "helpText7": {
+    "message": "Os links encurtados são permanentes uma vez criados. A principal razão pela qual não oferecemos isso é que pode ser abusado (por exemplo, spammers podem criar links inócuos e depois apontá-los para algum lugar malicioso).",
+    "description": "Help text paragraph 7"
+  },
+  "helpText8": {
+    "message": "A parte personalizada da URL (tudo depois de https://is.gd/) deve ter entre 5 e 30 caracteres de comprimento. URLs personalizadas são sensíveis a maiúsculas e minúsculas e podem consistir apenas em letras maiúsculas e minúsculas, números e o símbolo underscore (_). Caracteres não ingleses não são permitidos em URLs personalizadas (mas pode encurtar URLs que os contenham). Não têm outras restrições e não planeamos nomear-nos guardiões morais da Internet, por isso coisas como palavras rudes são permitidas.",
+    "description": "Help text paragraph 8"
+  },
+  "helpText10": {
+    "message": "TinyURL é outro serviço popular de encurtamento de URL. Está em operação desde 2002 e é um dos encurtadores de URL mais antigos da internet. O TinyURL não suporta aliases personalizados, opções de tipo de link ou rastreamento de estatísticas através desta extensão.",
+    "description": "Help text about TinyURL service"
+  },
+  "helpText9": {
+    "message": "Para mais informações sobre esses serviços, visite os respectivos sites.",
+    "description": "Help text paragraph 9"
+  },
+  "errorEnterUrl": {
+    "message": "Por favor digite uma URL para encurtar",
+    "description": "Error message for empty URL"
+  },
+  "errorValidUrl": {
+    "message": "Por favor digite uma URL válida",
+    "description": "Error message for invalid URL"
+  },
+  "errorShortenFailed": {
+    "message": "Falha ao encurtar URL",
+    "description": "Generic error message"
+  },
+  "errorCopyFailed": {
+    "message": "Falha ao copiar para a área de transferência",
+    "description": "Error message for copy failure"
+  },
+  "errorNoConnection": {
+    "message": "Sem conexão com a internet. Verifique sua conexão e tente novamente.",
+    "description": "Error message for no internet connection"
+  },
+  "errorServiceUnavailable": {
+    "message": "O serviço de encurtamento de URL está indisponível. Tente novamente mais tarde.",
+    "description": "Error message when service is down"
+  },
+  "errorNetworkTimeout": {
+    "message": "Tempo limite da solicitação. Verifique sua conexão e tente novamente.",
+    "description": "Error message for network timeout"
+  },
+  "errorServiceError": {
+    "message": "O serviço de encurtamento retornou um erro. Tente novamente.",
+    "description": "Error message for service-specific errors"
+  },
+  "dismissError": {
+    "message": "Descartar erro",
+    "description": "Tooltip for error dismiss button"
+  },
+  "language": {
+    "message": "Idioma",
+    "description": "Language selector label"
+  },
+  "contextMenuShorten": {
+    "message": "Encurtar esta URL",
+    "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "O serviço está com problemas no banco de dados. Por favor, tente usar o TinyURL.",
+    "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "Histórico",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "Limpar",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "Nenhuma URL encurtada ainda",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "Código QR",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "Alternar modo escuro",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "Não foi possível gerar o código QR",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "Excluir",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "Agora mesmo",
+    "description": "Relative time for recent items"
+  }
+}
