@@ -115,8 +115,12 @@
     "message": "Der benutzerdefinierte Teil der URL (alles nach https://is.gd/) muss zwischen 5 und 30 Zeichen lang sein. Benutzerdefinierte URLs sind groß-/kleinschreibungsabhängig und können nur aus Groß- und Kleinbuchstaben, Zahlen und dem Unterstrich (_) Symbol bestehen. Nicht-englische Zeichen sind in benutzerdefinierten URLs nicht erlaubt (aber Sie können URLs kürzen, die sie enthalten). Sie haben keine anderen Einschränkungen und wir planen nicht, uns zu moralischen Wächtern des Internets zu ernennen, daher sind Dinge wie Schimpfwörter erlaubt.",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURL ist ein weiterer beliebter URL-Verkürzungsdienst. Er ist seit 2002 in Betrieb und einer der ältesten URL-Verkürzer im Internet. TinyURL unterstützt über diese Erweiterung keine benutzerdefinierten Aliase, Linktyp-Optionen oder Statistikverfolgung.",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "Für weitere Informationen über diese Dienste können Sie ihre jeweiligen Websites besuchen:",
+    "message": "Weitere Informationen über diese Dienste finden Sie auf den jeweiligen Webseiten.",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "Diese URL kürzen",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "Der Dienst hat Datenbankprobleme. Bitte versuchen Sie stattdessen TinyURL.",
+    "description": "Error message when service database query fails"
   }
 }

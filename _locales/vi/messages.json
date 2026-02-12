@@ -115,8 +115,12 @@
     "message": "Phần tùy chỉnh của URL (mọi thứ sau https://is.gd/) phải dài từ 5 đến 30 ký tự. URL tùy chỉnh phân biệt chữ hoa chữ thường và chỉ có thể bao gồm chữ cái hoa và thường, số và ký hiệu gạch dưới (_). Ký tự không phải tiếng Anh không được phép trong URL tùy chỉnh (nhưng bạn có thể rút gọn URL có chứa chúng). Chúng không có hạn chế nào khác và không có kế hoạch bổ nhiệm bản thân làm người bảo vệ đạo đức của Internet, vì vậy những thứ như từ thô tục được phép.",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURL là một dịch vụ rút gọn URL phổ biến khác. Dịch vụ này đã hoạt động từ năm 2002 và là một trong những dịch vụ rút gọn URL lâu đời nhất trên internet. TinyURL không hỗ trợ tùy chỉnh alias, tùy chọn loại liên kết hoặc theo dõi thống kê qua extension này.",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "Để biết thêm thông tin về các dịch vụ này, bạn có thể truy cập các trang web tương ứng của chúng:",
+    "message": "Để biết thêm thông tin về các dịch vụ này, bạn có thể truy cập các trang web tương ứng.",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "Rút gọn URL này",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "Dịch vụ đang gặp sự cố cơ sở dữ liệu. Vui lòng thử sử dụng TinyURL.",
+    "description": "Error message when service database query fails"
   }
 }

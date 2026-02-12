@@ -115,8 +115,12 @@
     "message": "La parte personalizzata dell'URL (tutto dopo https://is.gd/) deve essere tra 5 e 30 caratteri di lunghezza. Gli URL personalizzati sono sensibili alle maiuscole e possono consistere solo di lettere maiuscole e minuscole, numeri e il simbolo underscore (_). I caratteri non inglesi non sono consentiti negli URL personalizzati (ma puoi accorciare URL che li contengono). Non hanno altre restrizioni e non abbiamo intenzione di nominarci guardiani morali di Internet, quindi cose come le parolacce sono consentite.",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURL è un altro popolare servizio di accorciamento URL. È in funzione dal 2002 ed è uno dei più antichi abbreviatori di URL su Internet. TinyURL non supporta alias personalizzati, opzioni del tipo di collegamento o tracciamento statistico tramite questa estensione.",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "Per maggiori informazioni su questi servizi, puoi visitare i loro rispettivi siti web:",
+    "message": "Per ulteriori informazioni su questi servizi, visita i rispettivi siti web.",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "Accorcia questo URL",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "Il servizio ha problemi di database. Prova a usare TinyURL.",
+    "description": "Error message when service database query fails"
   }
 }

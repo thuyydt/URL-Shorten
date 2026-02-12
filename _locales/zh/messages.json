@@ -115,8 +115,12 @@
     "message": "URL 的自定义部分（https://is.gd/ 之后的所有内容）必须在 5 到 30 个字符之间。自定义 URL 区分大小写，只能包含大小写字母、数字和下划线（_）符号。自定义 URL 中不允许使用非英语字符（但您可以缩短包含它们的 URL）。它们没有其他限制，也不打算任命自己为互联网的道德守护者，因此允许粗话等内容。",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURL 是另一个流行的网址缩短服务。它自2002年起运营，是互联网上最古老的网址缩短服务之一。TinyURL 不支持通过此扩展程序使用自定义别名、链接类型选项或统计跟踪功能。",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "有关这些服务的更多信息，您可以访问它们各自的网站：",
+    "message": "如需了解更多关于这些服务的信息，请访问它们各自的网站。",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "缩短此 URL",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "服务出现数据库问题，请尝试使用 TinyURL。",
+    "description": "Error message when service database query fails"
   }
 }

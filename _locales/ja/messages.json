@@ -115,8 +115,12 @@
     "message": "URLのカスタム部分（https://is.gd/以降のすべて）は5〜30文字の長さである必要があります。カスタムURLは大文字と小文字を区別し、大文字と小文字、数字、アンダースコア（_）記号のみで構成できます。カスタムURLでは英語以外の文字は許可されていません（ただし、それらを含むURLを短縮することはできます）。他の制限はなく、インターネットの道徳的な守護者に自分自身を任命する予定もないため、失礼な言葉などが許可されています。",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURLはもう一つの人気のあるURL短縮サービスです。2002年から運営されており、インターネット上で最も古いURL短縮サービスの一つです。TinyURLではこの拡張機能を通じてカスタムエイリアス、リンクタイプオプション、統計追跡はサポートされていません。",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "これらのサービスの詳細については、それぞれのウェブサイトをご覧ください：",
+    "message": "これらのサービスの詳細については、それぞれのウェブサイトをご覧ください。",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "このURLを短縮",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "サービスのデータベースに問題が発生しています。TinyURLをお試しください。",
+    "description": "Error message when service database query fails"
   }
 }

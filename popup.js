@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const customAlias = document.getElementById('customAlias');
     const isGdBtn = document.getElementById('isGdBtn');
     const vGdBtn = document.getElementById('vGdBtn');
+    const tinyUrlBtn = document.getElementById('tinyUrlBtn');
     const serviceInfoBtn = document.getElementById('serviceInfoBtn');
     const serviceInfoModal = document.getElementById('serviceInfoModal');
     const closeModal = document.getElementById('closeModal');
@@ -249,19 +250,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Service selection
     isGdBtn.addEventListener('click', function() {
-        selectService('is.gd', isGdBtn, vGdBtn);
+        selectService('is.gd', isGdBtn, [vGdBtn, tinyUrlBtn]);
+        toggleServiceOptions(true);
     });
 
     vGdBtn.addEventListener('click', function() {
-        selectService('v.gd', vGdBtn, isGdBtn);
+        selectService('v.gd', vGdBtn, [isGdBtn, tinyUrlBtn]);
+        toggleServiceOptions(true);
     });
 
-    function selectService(service, activeBtn, inactiveBtn) {
+    tinyUrlBtn.addEventListener('click', function() {
+        selectService('tinyurl', tinyUrlBtn, [isGdBtn, vGdBtn]);
+        toggleServiceOptions(false);
+    });
+
+    function selectService(service, activeBtn, inactiveBtns) {
         selectedService = service;
         activeBtn.classList.add('active');
-        inactiveBtn.classList.remove('active');
+        inactiveBtns.forEach(btn => btn.classList.remove('active'));
         if (error.classList.contains('visible')) {
             hideError();
+        }
+    }
+
+    function toggleServiceOptions(show) {
+        const optionsSection = document.querySelector('.options-section');
+        const customAliasSection = document.querySelector('.custom-alias-section');
+        if (optionsSection) {
+            optionsSection.style.display = show ? '' : 'none';
+        }
+        if (customAliasSection) {
+            customAliasSection.style.display = show ? '' : 'none';
         }
     }
 
@@ -329,6 +348,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     async function shortenUrl(url, service, alias = '', options = {}) {
+        // TinyURL service
+        if (service === 'tinyurl') {
+            return await shortenWithTinyUrl(url);
+        }
+
+        // is.gd / v.gd service
         const baseUrl = service === 'is.gd' ? 'https://is.gd/create.php' : 'https://v.gd/create.php';
         
         const params = new URLSearchParams({
@@ -392,7 +417,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (result.includes('Error:')) {
                 const errorMessage = result.replace('Error: ', '').trim();
                 // Handle common service errors
-                if (errorMessage.toLowerCase().includes('invalid url')) {
+                if (errorMessage.toLowerCase().includes('database query failed')) {
+                    throw new Error(getMessage('errorDatabaseFailed'));
+                } else if (errorMessage.toLowerCase().includes('invalid url')) {
                     throw new Error(getMessage('errorValidUrl'));
                 } else if (errorMessage.toLowerCase().includes('custom url already taken') || errorMessage.toLowerCase().includes('keyword unavailable')) {
                     throw new Error('The custom alias is already taken. Please choose a different one.');
@@ -440,6 +467,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Unexpected error in shortenUrl:', error);
                 throw new Error(error.message || getMessage('errorShortenFailed'));
             }
+        }
+    }
+
+    async function shortenWithTinyUrl(url) {
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+            const response = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`, {
+                method: 'GET',
+                signal: controller.signal
+            });
+
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                if (response.status >= 500) {
+                    throw new Error(getMessage('errorServiceUnavailable'));
+                }
+                throw new Error(getMessage('errorServiceError'));
+            }
+
+            const result = await response.text();
+
+            if (!result.startsWith('http')) {
+                throw new Error(getMessage('errorServiceError'));
+            }
+
+            return result.trim();
+        } catch (error) {
+            if (error.name === 'AbortError') {
+                throw new Error(getMessage('errorNetworkTimeout'));
+            } else if (error.message && (
+                error.message.includes('Failed to fetch') ||
+                error.message.includes('Load failed') ||
+                error.message.includes('NetworkError')
+            )) {
+                throw new Error(getMessage('errorNoConnection'));
+            }
+            throw error;
         }
     }
 

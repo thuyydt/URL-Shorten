@@ -1,34 +1,25 @@
-# UR## Features
+# URL Shorten - Chrome Extension
 
-- 🔗 **URL Shortening**: Quickly shorten long URLs using is.gd or v.gd services
-- 🌍 **Multiple Languages**: Support for 12 languages including English, Chinese, Japanese, Arabic, German, Spanish, French, Hindi, Italian, Portuguese, Russian, and Vietnamese
-- ✏️ **Custom Aliases**: Create custom short URLs with your own aliases
-- 📊 **Statistics Tracking**: Option to track click statistics for your shortened URLs
-- 🎨 **Multiple Formats**: Choose between standard, lowercase, or pronounceable formats
-- 📋 **One-click Copy**: Copy shortened URLs to clipboard instantly
-- 🎯 **Auto URL Detection**: Automatically loads the current tab's URL when opened
-- 🖱️ **Context Menu**: Right-click on any link or page to shorten it
-- ⚡ Fast and lightweight with modern, responsive UI designhrome Extension
-
-A Chrome extension that allows you to shorten URLs using is.gd or v.gd services with comprehensive support for 12 languages including English, Chinese, Japanese, Arabic, German, Spanish, French, Hindi, Italian, Portuguese, Russian, and Vietnamese.
+A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL services with comprehensive support for 12 languages including English, Chinese, Japanese, Arabic, German, Spanish, French, Hindi, Italian, Portuguese, Russian, and Vietnamese.
 
 ## Features
 
-- 🔗 **URL Shortening**: Quickly shorten long URLs using is.gd or v.gd services
-- 🌍 **Multiple Languages**: Support for 12 languages, including Chinese, Japanese, Arabic, and more
-- ✏️ **Custom Aliases**: Create custom short URLs with your own aliases
-- 📊 **Statistics Tracking**: Option to track click statistics for your shortened URLs
-- 🎨 **Multiple Formats**: Choose between standard, lowercase, or pronounceable formats
+- 🔗 **URL Shortening**: Quickly shorten long URLs using is.gd, v.gd, or TinyURL services
+- 🌍 **Multiple Languages**: Support for 12 languages including English, Chinese, Japanese, Arabic, German, Spanish, French, Hindi, Italian, Portuguese, Russian, and Vietnamese
+- ✏️ **Custom Aliases**: Create custom short URLs with your own aliases (is.gd & v.gd)
+- 📊 **Statistics Tracking**: Option to track click statistics for your shortened URLs (is.gd & v.gd)
+- 🎨 **Multiple Formats**: Choose between standard, lowercase, or pronounceable formats (is.gd & v.gd)
 - 📋 **One-click Copy**: Copy shortened URLs to clipboard instantly
 - 🎯 **Auto URL Detection**: Automatically loads the current tab's URL when opened
 - 🖱️ **Context Menu**: Right-click on any link or page to shorten it
+- 🔄 **Fallback Service**: TinyURL as a reliable backup when other services are unavailable
 - ⚡ Fast and lightweight with modern, responsive UI design
 
 ---
 
 ## 特性 (中文)
 
-- 🔗 **URL 缩短**: 使用 is.gd 或 v.gd 服务快速缩短长 URL
+- 🔗 **URL 缩短**: 使用 is.gd、v.gd 或 TinyURL 服务快速缩短长 URL
 - 🌍 **多语言支持**: 支持 12 种语言，包括中文、日语、阿拉伯语等
 - ✏️ **自定义别名**: 使用您自己的别名创建自定义短 URL
 - 📊 **统计跟踪**: 可选择跟踪缩短 URL 的点击统计
@@ -42,7 +33,7 @@ A Chrome extension that allows you to shorten URLs using is.gd or v.gd services 
 
 ## 機能 (日本語)
 
-- 🔗 **URL短縮**: is.gd または v.gd サービスを使用して長いURLを素早く短縮
+- 🔗 **URL短縮**: is.gd、v.gd、または TinyURL サービスを使用して長いURLを素早く短縮
 - 🌍 **多言語サポート**: 日本語、中国語、アラビア語など12言語をサポート
 - ✏️ **カスタムエイリアス**: 独自のエイリアスでカスタム短縮URLを作成
 - 📊 **統計追跡**: 短縮URLのクリック統計を追跡するオプション
@@ -56,7 +47,7 @@ A Chrome extension that allows you to shorten URLs using is.gd or v.gd services 
 
 ## Fonctionnalités (Français)
 
-- 🔗 **Raccourcissement d'URL**: Raccourcissez rapidement les longues URL avec les services is.gd ou v.gd
+- 🔗 **Raccourcissement d'URL**: Raccourcissez rapidement les longues URL avec les services is.gd, v.gd ou TinyURL
 - 🌍 **Support multilingue**: Support de 12 langues incluant français, chinois, arabe, etc.
 - ✏️ **Alias personnalisés**: Créez des URL courtes personnalisées avec vos propres alias
 - 📊 **Suivi des statistiques**: Option pour suivre les statistiques de clics de vos URL raccourcies
@@ -70,7 +61,7 @@ A Chrome extension that allows you to shorten URLs using is.gd or v.gd services 
 
 ## Características (Español)
 
-- 🔗 **Acortamiento de URL**: Acorta rápidamente URLs largas usando los servicios is.gd o v.gd
+- 🔗 **Acortamiento de URL**: Acorta rápidamente URLs largas usando los servicios is.gd, v.gd o TinyURL
 - 🌍 **Soporte multiidioma**: Soporte para 12 idiomas incluyendo español, chino, árabe, etc.
 - ✏️ **Alias personalizados**: Crea URLs cortas personalizadas con tus propios alias
 - 📊 **Seguimiento de estadísticas**: Opción para rastrear estadísticas de clics de tus URLs acortadas
@@ -84,7 +75,7 @@ A Chrome extension that allows you to shorten URLs using is.gd or v.gd services 
 
 ## Funktionen (Deutsch)
 
-- 🔗 **URL-Verkürzung**: Verkürzen Sie lange URLs schnell mit den Diensten is.gd oder v.gd
+- 🔗 **URL-Verkürzung**: Verkürzen Sie lange URLs schnell mit den Diensten is.gd, v.gd oder TinyURL
 - 🌍 **Mehrsprachige Unterstützung**: Unterstützung für 12 Sprachen einschließlich Deutsch, Chinesisch, Arabisch, etc.
 - ✏️ **Benutzerdefinierte Aliase**: Erstellen Sie benutzerdefinierte kurze URLs mit Ihren eigenen Aliasen
 - 📊 **Statistikverfolgung**: Option zur Verfolgung von Klickstatistiken für Ihre verkürzten URLs
@@ -98,7 +89,7 @@ A Chrome extension that allows you to shorten URLs using is.gd or v.gd services 
 
 ## Особенности (Русский)
 
-- 🔗 **Сокращение URL**: Быстро сокращайте длинные URL с помощью сервисов is.gd или v.gd
+- 🔗 **Сокращение URL**: Быстро сокращайте длинные URL с помощью сервисов is.gd, v.gd или TinyURL
 - 🌍 **Многоязычная поддержка**: Поддержка 12 языков, включая русский, китайский, арабский и др.
 - ✏️ **Пользовательские псевдонимы**: Создавайте пользовательские короткие URL с собственными псевдонимами
 - 📊 **Отслеживание статистики**: Опция отслеживания статистики кликов для ваших сокращенных URL
@@ -163,8 +154,8 @@ You can manually change the language using the language selector in the top-righ
 
 1. Click the extension icon in your Chrome toolbar
 2. The current tab URL will be automatically loaded
-3. Choose between is.gd or v.gd service
-4. Optionally enter a custom alias
+3. Choose between is.gd, v.gd, or TinyURL service
+4. Optionally enter a custom alias (is.gd & v.gd only)
 5. Click "Shorten URL"
 6. Copy the shortened URL with one click
 
@@ -176,12 +167,13 @@ You can manually change the language using the language selector in the top-righ
 
 ## API Services
 
-This extension uses two popular URL shortening services:
+This extension uses three popular URL shortening services:
 
-- **is.gd** - Fast, reliable URL shortening with custom alias support
-- **v.gd** - Alternative service with identical features to is.gd
+- **is.gd** - Fast, reliable URL shortening with custom alias support, link type options, and statistics tracking
+- **v.gd** - Sister service to is.gd with link preview pages enabled by default for safer link sharing
+- **TinyURL** - One of the oldest and most reliable URL shorteners (since 2002), used as a fallback when other services are unavailable
 
-Both services are free and don't require API keys.
+is.gd and v.gd are free and don't require API keys. TinyURL provides a simple API that also requires no authentication.
 
 ## Permissions
 
@@ -190,12 +182,12 @@ The extension requires the following permissions:
 - `activeTab` - To access the current tab URL
 - `contextMenus` - To add right-click context menu options
 - `storage` - To temporarily store URLs for context menu functionality
-- `host_permissions` - To make API calls to is.gd and v.gd
+- `host_permissions` - To make API calls to is.gd, v.gd, and TinyURL
 
 ## Privacy
 
 - No user data is collected or stored
-- URLs are only sent to the selected shortening service (is.gd or v.gd)
+- URLs are only sent to the selected shortening service (is.gd, v.gd, or TinyURL)
 - All processing happens locally in your browser
 
 ## Development
@@ -231,7 +223,7 @@ Convert the SVG icon to PNG format in multiple sizes:
 2. Test the popup interface
 3. Test context menu functionality
 4. Test URL validation and error handling
-5. Test both is.gd and v.gd services
+5. Test is.gd, v.gd, and TinyURL services
 
 ## Contributing
 
@@ -285,7 +277,7 @@ The extension currently supports 12 languages. To add support for additional lan
 This extension:
 - Only processes URLs when explicitly requested by the user
 - Does not track, store, or transmit personal data
-- Uses official is.gd and v.gd APIs over HTTPS
+- Uses official is.gd, v.gd, and TinyURL APIs over HTTPS
 - Stores only language preferences in Chrome sync storage
 - All data processing happens locally in your browser
 
@@ -298,7 +290,7 @@ MIT License - see LICENSE file for details
 If you encounter any issues:
 
 1. Check that the extension has the required permissions
-2. Verify that is.gd and v.gd services are accessible
+2. Verify that is.gd, v.gd, and TinyURL services are accessible
 3. Check the browser console for error messages
 4. Reload the extension in chrome://extensions/
 5. Try switching languages to see if it's a localization issue
@@ -306,6 +298,14 @@ If you encounter any issues:
 For bug reports or feature requests, please create an issue in the repository.
 
 ## Version History
+
+- **1.1.0** - TinyURL support & improvements
+  - Added TinyURL as a third URL shortening service
+  - Fallback option when is.gd/v.gd are unavailable
+  - Improved error handling for database failures
+  - Updated Help & Information modal with TinyURL details
+  - Fixed modal content being cut off at the bottom
+  - Updated all 12 language translations
 
 - **1.0.0** - Initial release
   - Basic URL shortening with is.gd and v.gd

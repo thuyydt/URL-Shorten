@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "__MSG_extensionDescription__",
   "default_locale": "en",
   "permissions": [
@@ -11,7 +11,8 @@
   ],
   "host_permissions": [
     "https://is.gd/*",
-    "https://v.gd/*"
+    "https://v.gd/*",
+    "https://tinyurl.com/*"
   ],
   "action": {
     "default_popup": "popup.html",

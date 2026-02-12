@@ -115,8 +115,12 @@
     "message": "The custom part of the URL (everything after https://is.gd/) must be between 5 and 30 characters long. Custom URLs are case sensitive and can only consist of upper and lower case letters, numbers and the underscore (_) symbol. Non-English characters aren't allowed in custom URLs (but you can shorten URLs containing them). They don't have any other restrictions and don't plan to appoint ourselves the moral guardians of the Internet, so things like rude words are allowed.",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURL is another popular URL shortening service. It has been operating since 2002 and is one of the oldest URL shorteners on the internet. TinyURL does not support custom aliases, link type options, or statistics tracking through this extension.",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "For more information about these services, you can visit their respective websites:",
+    "message": "For more information about these services, you can visit their respective websites.",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "Shorten this URL",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "The service is experiencing database issues. Please try using TinyURL instead.",
+    "description": "Error message when service database query fails"
   }
 }

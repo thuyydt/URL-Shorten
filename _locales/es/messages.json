@@ -115,8 +115,12 @@
     "message": "La parte personalizada de la URL (todo después de https://is.gd/) debe tener entre 5 y 30 caracteres de longitud. Las URLs personalizadas son sensibles a mayúsculas y minúsculas y solo pueden consistir en letras mayúsculas y minúsculas, números y el símbolo de guión bajo (_). Los caracteres no ingleses no están permitidos en URLs personalizadas (pero puedes acortar URLs que los contengan). No tienen otras restricciones y no planeamos nombrarnos guardianes morales de Internet, por lo que se permiten cosas como palabras groseras.",
     "description": "Help text paragraph 8"
   },
+  "helpText10": {
+    "message": "TinyURL es otro servicio popular de acortamiento de URL. Ha estado en funcionamiento desde 2002 y es uno de los acortadores de URL más antiguos de Internet. TinyURL no admite alias personalizados, opciones de tipo de enlace ni seguimiento de estadísticas a través de esta extensión.",
+    "description": "Help text about TinyURL service"
+  },
   "helpText9": {
-    "message": "Para más información sobre estos servicios, puedes visitar sus respectivos sitios web:",
+    "message": "Para más información sobre estos servicios, puede visitar sus respectivos sitios web.",
     "description": "Help text paragraph 9"
   },
   "errorEnterUrl": {
@@ -162,5 +166,9 @@
   "contextMenuShorten": {
     "message": "Acortar esta URL",
     "description": "Context menu item text"
+  },
+  "errorDatabaseFailed": {
+    "message": "El servicio tiene problemas de base de datos. Por favor, intente usar TinyURL.",
+    "description": "Error message when service database query fails"
   }
 }
