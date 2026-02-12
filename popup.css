@@ -187,13 +187,14 @@ label[for="languageSelect"] {
 
 .service-btn {
     flex: 1;
-    padding: 12px 16px;
+    padding: 10px 8px;
     border: 2px solid #e1e5e9;
     border-radius: 8px;
     background: white;
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: center;
+    font-size: 13px;
 }
 
 .service-content {
@@ -201,7 +202,7 @@ label[for="languageSelect"] {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    scale: 1.2;
+    font-weight: 500;
     transition: transform 0.2s ease;
 }
 

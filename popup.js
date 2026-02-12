@@ -22,10 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const languageSelect = document.getElementById('languageSelect');
 
     let selectedService = 'is.gd';
+    let errorTimer = null;
 
     // Load messages and initialize UI
     loadMessages().then(() => {
         loadLanguagePreference();
+        loadServicePreference();
         updateUI();
         initializeUI();
     });
@@ -119,7 +121,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (messages[key]) {
-                element.textContent = messages[key].message;
+                // Only update text if element has no child elements with data-i18n
+                const hasI18nChildren = element.querySelector('[data-i18n], [data-i18n-placeholder], [data-i18n-title]');
+                if (!hasI18nChildren) {
+                    element.textContent = messages[key].message;
+                } else {
+                    // Update only the first text node
+                    const firstText = Array.from(element.childNodes).find(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
+                    if (firstText) {
+                        firstText.textContent = messages[key].message;
+                    }
+                }
             }
         });
 
@@ -183,9 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
         hideResult();
     }
 
-    // Initialize on load
-    initializeUI();
-
     // Service info modal functionality
     serviceInfoBtn.addEventListener('click', function() {
         serviceInfoModal.classList.add('visible');
@@ -216,8 +225,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto-load current tab URL on popup open
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-        if (tabs[0] && tabs[0].url && !tabs[0].url.startsWith('chrome://')) {
-            urlInput.value = tabs[0].url;
+        if (tabs[0] && tabs[0].url) {
+            const url = tabs[0].url;
+            // Filter out non-shortenable URLs
+            if (!url.startsWith('chrome://') && 
+                !url.startsWith('chrome-extension://') &&
+                !url.startsWith('about:') &&
+                !url.startsWith('edge://') &&
+                !url.startsWith('brave://') &&
+                !url.startsWith('vivaldi://') &&
+                !url.startsWith('file://')) {
+                urlInput.value = url;
+            }
         }
     });
 
@@ -268,9 +287,27 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedService = service;
         activeBtn.classList.add('active');
         inactiveBtns.forEach(btn => btn.classList.remove('active'));
+        // Save preference
+        chrome.storage.sync.set({ selectedService: service });
         if (error.classList.contains('visible')) {
             hideError();
         }
+    }
+
+    function loadServicePreference() {
+        chrome.storage.sync.get(['selectedService'], (result) => {
+            if (result.selectedService) {
+                const service = result.selectedService;
+                selectedService = service;
+                const btnMap = { 'is.gd': isGdBtn, 'v.gd': vGdBtn, 'tinyurl': tinyUrlBtn };
+                const activeBtn = btnMap[service];
+                if (activeBtn) {
+                    Object.values(btnMap).forEach(btn => btn.classList.remove('active'));
+                    activeBtn.classList.add('active');
+                    toggleServiceOptions(service !== 'tinyurl');
+                }
+            }
+        });
     }
 
     function toggleServiceOptions(show) {
@@ -329,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 copyBtn.innerHTML = originalHTML;
                 copyBtn.style.borderColor = '';
             }, 3000);
-        } catch (err) {
+        } catch (copyErr) {
             showError(getMessage('errorCopyFailed'));
         }
     });
@@ -551,6 +588,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showError(message) {
+        // Clear any previous timer
+        if (errorTimer) {
+            clearTimeout(errorTimer);
+            errorTimer = null;
+        }
+
         // Clear any previous error content
         error.textContent = '';
         
@@ -562,23 +605,33 @@ document.addEventListener('DOMContentLoaded', function() {
         dismissBtn.className = 'error-dismiss';
         dismissBtn.innerHTML = '×';
         dismissBtn.title = getMessage('dismissError');
-        dismissBtn.addEventListener('click', hideError);
+        dismissBtn.addEventListener('click', function() {
+            hideError(true);
+        });
         
         error.appendChild(errorContent);
         error.appendChild(dismissBtn);
         error.classList.add('visible');
         
         // Auto-hide after 5 seconds
-        setTimeout(hideError, 5000);
+        errorTimer = setTimeout(function() {
+            hideError(false);
+        }, 5000);
     }
 
-    function hideError() {
-        // Clear content after transition
-        setTimeout(() => {
-            error.classList.remove('visible');
-            setTimeout(() => {
+    function hideError(immediate) {
+        if (errorTimer) {
+            clearTimeout(errorTimer);
+            errorTimer = null;
+        }
+        error.classList.remove('visible');
+        if (immediate) {
+            error.innerHTML = '';
+        } else {
+            // Clear content after CSS transition completes
+            setTimeout(function() {
                 error.innerHTML = '';
             }, 300);
-        }, 3000);
+        }
     }
 });

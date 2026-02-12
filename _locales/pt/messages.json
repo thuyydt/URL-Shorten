@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "Encurte URLs usando os serviços is.gd ou v.gd",
+    "message": "Encurtar URLs usando os serviços is.gd, v.gd ou TinyURL",
     "description": "Extension description"
   },
   "title": {

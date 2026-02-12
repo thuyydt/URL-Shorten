@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "اختصر الروابط باستخدام خدمات is.gd أو v.gd",
+    "message": "اختصار الروابط باستخدام خدمات is.gd أو v.gd أو TinyURL",
     "description": "Extension description"
   },
   "title": {

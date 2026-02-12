@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "Rút gọn URL bằng dịch vụ is.gd hoặc v.gd",
+    "message": "Rút gọn URL sử dụng dịch vụ is.gd, v.gd hoặc TinyURL",
     "description": "Extension description"
   },
   "title": {

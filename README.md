@@ -305,7 +305,17 @@ For bug reports or feature requests, please create an issue in the repository.
   - Improved error handling for database failures
   - Updated Help & Information modal with TinyURL details
   - Fixed modal content being cut off at the bottom
-  - Updated all 12 language translations
+  - Fixed `hideError()` dismiss delay bug (now hides immediately on click)
+  - Fixed timer stacking in `showError()` causing premature auto-hide
+  - Fixed `updateUI()` destroying child elements with `data-i18n` attributes
+  - Removed duplicate `initializeUI()` call
+  - Fixed variable shadowing (`error` DOM element vs `catch` parameter)
+  - Service preference (is.gd/v.gd/TinyURL) now saved and restored across sessions
+  - Improved URL filtering (blocks `chrome-extension://`, `about:`, `edge://`, `brave://`, `vivaldi://`, `file://`)
+  - Adjusted service button sizing for 3-button layout
+  - Removed inline styles from HTML
+  - Removed duplicate comment in background.js
+  - Updated `extensionDescription` in all 12 language translations
 
 - **1.0.0** - Initial release
   - Basic URL shortening with is.gd and v.gd

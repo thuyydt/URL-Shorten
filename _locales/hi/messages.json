@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "is.gd या v.gd सेवाओं का उपयोग करके URL छोटा करें",
+    "message": "is.gd, v.gd या TinyURL सेवाओं का उपयोग करके URL छोटा करें",
     "description": "Extension description"
   },
   "title": {

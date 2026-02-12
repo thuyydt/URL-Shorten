@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "is.gd または v.gd サービスを使用してURLを短縮します",
+    "message": "is.gd、v.gd、またはTinyURLサービスを使用してURLを短縮",
     "description": "Extension description"
   },
   "title": {

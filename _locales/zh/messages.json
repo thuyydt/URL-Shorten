@@ -4,7 +4,7 @@
     "description": "Extension name"
   },
   "extensionDescription": {
-    "message": "使用 is.gd 或 v.gd 服务缩短 URL",
+    "message": "使用 is.gd、v.gd 或 TinyURL 服务缩短 URL",
     "description": "Extension description"
   },
   "title": {

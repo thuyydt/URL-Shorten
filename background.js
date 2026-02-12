@@ -1,7 +1,5 @@
 // Background script for URL Shorten extension
 
-// Background script for URL Shorten extension
-
 chrome.runtime.onInstalled.addListener(async () => {
     // Get or detect the user's language preference
     const result = await chrome.storage.sync.get(['selectedLanguage']);
