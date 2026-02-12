@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "El servicio tiene problemas de base de datos. Por favor, intente usar TinyURL.",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "Historial",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "Borrar",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "Aún no hay URLs acortadas",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "Código QR",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "Alternar modo oscuro",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "No se pudo generar el código QR",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "Eliminar",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "Ahora mismo",
+    "description": "Relative time for recent items"
   }
 }

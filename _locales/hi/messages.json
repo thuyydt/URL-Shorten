@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "सेवा में डेटाबेस समस्या हो रही है। कृपया TinyURL का उपयोग करें।",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "इतिहास",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "साफ़ करें",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "अभी तक कोई छोटा URL नहीं",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "QR कोड",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "डार्क मोड टॉगल करें",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "QR कोड जनरेट नहीं हो सका",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "हटाएं",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "अभी",
+    "description": "Relative time for recent items"
   }
 }

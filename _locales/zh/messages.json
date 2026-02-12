@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "服务出现数据库问题，请尝试使用 TinyURL。",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "历史记录",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "清除",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "暂无缩短的URL",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "二维码",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "切换深色模式",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "无法生成二维码",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "删除",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "刚刚",
+    "description": "Relative time for recent items"
   }
 }

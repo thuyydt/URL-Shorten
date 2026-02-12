@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "The service is experiencing database issues. Please try using TinyURL instead.",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "History",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "Clear",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "No shortened URLs yet",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "QR Code",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "Toggle dark mode",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "Unable to generate QR code",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "Delete",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "Just now",
+    "description": "Relative time for recent items"
   }
 }

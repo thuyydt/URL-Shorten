@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "Dịch vụ đang gặp sự cố cơ sở dữ liệu. Vui lòng thử sử dụng TinyURL.",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "Lịch sử",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "Xóa",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "Chưa có URL rút gọn nào",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "Mã QR",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "Chuyển chế độ tối",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "Không thể tạo mã QR",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "Xóa",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "Vừa xong",
+    "description": "Relative time for recent items"
   }
 }

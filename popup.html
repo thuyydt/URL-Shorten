@@ -87,7 +87,13 @@
                 <path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/>
               </svg>
             </button>
+            <button id="qrBtn" data-i18n-title="showQrCode" title="Show QR Code" class="action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+                <path d="M120-520v-320h320v320H120Zm80-80h160v-160H200v160Zm-80 480v-320h320v320H120Zm80-80h160v-160H200v160Zm320-320v-320h320v320H520Zm80-80h160v-160H600v160ZM760-120v-80h80v80h-80Zm-240-160v-80h80v80h-80Zm80 80v-80h80v80h-80Zm-80 80v-80h80v80h-80Zm80 80v-80h80v80h-80Zm80-80v-80h80v80h-80Zm0-160v-80h80v80h-80Zm80 80v-80h80v80h-80Z"/>
+              </svg>
+            </button>
           </div>
+          <div id="qrCodeContainer" class="qr-code-container"></div>
         </div>
 
         <div id="loading" class="loading">
@@ -100,7 +106,29 @@
         </div>
 
         <div id="error" class="error"></div>
+
+        <!-- History section -->
+        <div class="history-section">
+          <div class="history-header">
+            <label data-i18n="history">History</label>
+            <button id="clearHistoryBtn" class="clear-history-btn" data-i18n-title="clearHistory" title="Clear history">
+              <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="currentColor">
+                <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+              </svg>
+            </button>
+          </div>
+          <div id="historyList" class="history-list">
+            <div class="history-empty" data-i18n="historyEmpty">No history yet</div>
+          </div>
+        </div>
     </div>
+
+    <!-- Dark mode toggle (floating) -->
+    <button id="darkModeToggle" class="dark-mode-toggle" data-i18n-title="toggleDarkMode" title="Toggle dark mode">
+      <svg id="darkModeIcon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+        <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+      </svg>
+    </button>
 
     <!-- Modal overlay for service info -->
     <div id="serviceInfoModal" class="modal-overlay">

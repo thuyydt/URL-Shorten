@@ -20,16 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const shortenType = document.getElementById('shortenType');
     const logStats = document.getElementById('logStats');
     const languageSelect = document.getElementById('languageSelect');
+    const qrBtn = document.getElementById('qrBtn');
+    const qrCodeContainer = document.getElementById('qrCodeContainer');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const historyList = document.getElementById('historyList');
+    const clearHistoryBtn = document.getElementById('clearHistoryBtn');
 
     let selectedService = 'is.gd';
     let errorTimer = null;
+    const MAX_HISTORY = 20;
 
     // Load messages and initialize UI
     loadMessages().then(() => {
         loadLanguagePreference();
         loadServicePreference();
+        loadDarkModePreference();
         updateUI();
         initializeUI();
+        renderHistory();
     });
 
     async function loadMessages() {
@@ -343,6 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const shortUrl = await shortenUrl(url, selectedService, alias, options);
             showResult(shortUrl);
+            saveToHistory(url, shortUrl, selectedService);
         } catch (err) {
             showError(err.message || getMessage('errorShortenFailed'));
         } finally {
@@ -633,5 +642,207 @@ document.addEventListener('DOMContentLoaded', function() {
                 error.innerHTML = '';
             }, 300);
         }
+    }
+
+    // ===== QR Code =====
+    qrBtn.addEventListener('click', function() {
+        const url = resultUrl.value;
+        if (!url) return;
+
+        if (qrCodeContainer.classList.contains('visible')) {
+            qrCodeContainer.classList.remove('visible');
+            qrCodeContainer.innerHTML = '';
+            return;
+        }
+
+        generateQRCode(url);
+    });
+
+    function generateQRCode(text) {
+        qrCodeContainer.innerHTML = '';
+        const canvas = document.createElement('canvas');
+        const size = 160;
+        canvas.width = size;
+        canvas.height = size;
+        
+        // Simple QR code generation using Canvas
+        // We use the Google Charts API as image source
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = function() {
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, size, size);
+            ctx.drawImage(img, 0, 0, size, size);
+            qrCodeContainer.appendChild(canvas);
+            qrCodeContainer.classList.add('visible');
+        };
+        img.onerror = function() {
+            // Fallback: show as text link
+            const fallback = document.createElement('div');
+            fallback.style.cssText = 'text-align:center;padding:8px;font-size:12px;color:#999;';
+            fallback.textContent = getMessage('qrCodeError');
+            qrCodeContainer.appendChild(fallback);
+            qrCodeContainer.classList.add('visible');
+        };
+        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(text)}`;
+    }
+
+    // ===== Dark Mode =====
+    darkModeToggle.addEventListener('click', function() {
+        const isDark = document.body.classList.toggle('dark-mode');
+        chrome.storage.sync.set({ darkMode: isDark });
+        updateDarkModeIcon(isDark);
+    });
+
+    function loadDarkModePreference() {
+        chrome.storage.sync.get(['darkMode'], (result) => {
+            if (result.darkMode === true) {
+                document.body.classList.add('dark-mode');
+                updateDarkModeIcon(true);
+            } else if (result.darkMode === undefined) {
+                // Auto-detect system preference
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.body.classList.add('dark-mode');
+                    updateDarkModeIcon(true);
+                }
+            }
+        });
+    }
+
+    function updateDarkModeIcon(isDark) {
+        const icon = document.getElementById('darkModeIcon');
+        if (isDark) {
+            // Sun icon for light mode switch
+            icon.innerHTML = '<path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>';
+        } else {
+            // Moon icon for dark mode switch
+            icon.innerHTML = '<path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>';
+        }
+    }
+
+    // ===== History =====
+    function saveToHistory(originalUrl, shortUrl, service) {
+        chrome.storage.local.get(['urlHistory'], (result) => {
+            let history = result.urlHistory || [];
+            // Add to beginning
+            history.unshift({
+                original: originalUrl,
+                short: shortUrl,
+                service: service,
+                date: Date.now()
+            });
+            // Keep only MAX_HISTORY items
+            if (history.length > MAX_HISTORY) {
+                history = history.slice(0, MAX_HISTORY);
+            }
+            chrome.storage.local.set({ urlHistory: history }, () => {
+                renderHistory();
+            });
+        });
+    }
+
+    function renderHistory() {
+        chrome.storage.local.get(['urlHistory'], (result) => {
+            const history = result.urlHistory || [];
+            historyList.innerHTML = '';
+
+            if (history.length === 0) {
+                const empty = document.createElement('div');
+                empty.className = 'history-empty';
+                empty.textContent = getMessage('historyEmpty');
+                historyList.appendChild(empty);
+                return;
+            }
+
+            history.forEach((item, index) => {
+                const el = document.createElement('div');
+                el.className = 'history-item';
+
+                const info = document.createElement('div');
+                info.className = 'history-item-info';
+
+                const shortLink = document.createElement('div');
+                shortLink.className = 'history-item-short';
+                shortLink.textContent = item.short;
+
+                const originalLink = document.createElement('div');
+                originalLink.className = 'history-item-original';
+                originalLink.textContent = item.original;
+
+                info.appendChild(shortLink);
+                info.appendChild(originalLink);
+
+                const meta = document.createElement('div');
+                meta.className = 'history-item-meta';
+                meta.textContent = formatDate(item.date);
+
+                const copyBtn2 = document.createElement('button');
+                copyBtn2.className = 'history-item-copy';
+                copyBtn2.title = getMessage('copyToClipboard');
+                copyBtn2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>';
+                copyBtn2.addEventListener('click', async function(e) {
+                    e.stopPropagation();
+                    try {
+                        await navigator.clipboard.writeText(item.short);
+                        copyBtn2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#28a745"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>';
+                        setTimeout(() => {
+                            copyBtn2.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>';
+                        }, 2000);
+                    } catch (err) { /* ignore */ }
+                });
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'history-item-delete';
+                deleteBtn.title = getMessage('deleteHistoryItem');
+                deleteBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>';
+                deleteBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    deleteHistoryItem(index);
+                });
+
+                el.appendChild(info);
+                el.appendChild(meta);
+                el.appendChild(copyBtn2);
+                el.appendChild(deleteBtn);
+
+                // Click to load URL
+                el.addEventListener('click', function() {
+                    urlInput.value = item.original;
+                    resultUrl.value = item.short;
+                    resultSection.classList.add('visible');
+                });
+
+                historyList.appendChild(el);
+            });
+        });
+    }
+
+    function deleteHistoryItem(index) {
+        chrome.storage.local.get(['urlHistory'], (result) => {
+            let history = result.urlHistory || [];
+            history.splice(index, 1);
+            chrome.storage.local.set({ urlHistory: history }, () => {
+                renderHistory();
+            });
+        });
+    }
+
+    clearHistoryBtn.addEventListener('click', function() {
+        chrome.storage.local.set({ urlHistory: [] }, () => {
+            renderHistory();
+        });
+    });
+
+    function formatDate(timestamp) {
+        const d = new Date(timestamp);
+        const now = new Date();
+        const diff = now - d;
+        
+        if (diff < 60000) return getMessage('justNow');
+        if (diff < 3600000) return Math.floor(diff / 60000) + 'm';
+        if (diff < 86400000) return Math.floor(diff / 3600000) + 'h';
+        if (diff < 604800000) return Math.floor(diff / 86400000) + 'd';
+        return d.toLocaleDateString();
     }
 });

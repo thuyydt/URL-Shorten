@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "サービスのデータベースに問題が発生しています。TinyURLをお試しください。",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "履歴",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "消去",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "短縮URLはまだありません",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "QRコード",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "ダークモード切替",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "QRコードを生成できませんでした",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "削除",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "たった今",
+    "description": "Relative time for recent items"
   }
 }

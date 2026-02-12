@@ -170,5 +170,37 @@
   "errorDatabaseFailed": {
     "message": "الخدمة تواجه مشاكل في قاعدة البيانات. يرجى محاولة استخدام TinyURL.",
     "description": "Error message when service database query fails"
+  },
+  "history": {
+    "message": "السجل",
+    "description": "History section title"
+  },
+  "clearHistory": {
+    "message": "مسح",
+    "description": "Clear history button"
+  },
+  "historyEmpty": {
+    "message": "لا توجد روابط مختصرة بعد",
+    "description": "Empty history message"
+  },
+  "showQrCode": {
+    "message": "رمز QR",
+    "description": "QR code button tooltip"
+  },
+  "toggleDarkMode": {
+    "message": "تبديل الوضع الداكن",
+    "description": "Dark mode toggle tooltip"
+  },
+  "qrCodeError": {
+    "message": "تعذر إنشاء رمز QR",
+    "description": "QR code generation error"
+  },
+  "deleteHistoryItem": {
+    "message": "حذف",
+    "description": "Delete history item tooltip"
+  },
+  "justNow": {
+    "message": "الآن",
+    "description": "Relative time for recent items"
   }
 }

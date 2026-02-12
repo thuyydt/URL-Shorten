@@ -13,6 +13,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 🎯 **Auto URL Detection**: Automatically loads the current tab's URL when opened
 - 🖱️ **Context Menu**: Right-click on any link or page to shorten it
 - 🔄 **Fallback Service**: TinyURL as a reliable backup when other services are unavailable
+- 📜 **History**: Keep track of your recently shortened URLs with copy and delete options
+- 📱 **QR Code**: Generate QR codes for your shortened URLs
+- 🌙 **Dark Mode**: Toggle dark mode or auto-detect system preference
 - ⚡ Fast and lightweight with modern, responsive UI design
 
 ---
@@ -27,6 +30,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 📋 **一键复制**: 瞬间将缩短的 URL 复制到剪贴板
 - 🎯 **自动 URL 检测**: 打开时自动加载当前标签页的 URL
 - 🖱️ **上下文菜单**: 右键点击任何链接或页面即可缩短
+- 📜 **历史记录**: 记录最近缩短的 URL，支持复制和删除
+- 📱 **二维码**: 为缩短的 URL 生成二维码
+- 🌙 **深色模式**: 切换深色模式或自动检测系统偏好
 - ⚡ 快速轻量，现代响应式 UI 设计
 
 ---
@@ -41,6 +47,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 📋 **ワンクリックコピー**: 短縮URLを瞬時にクリップボードにコピー
 - 🎯 **自動URL検出**: 開いたときに現在のタブのURLを自動読み込み
 - 🖱️ **コンテキストメニュー**: 任意のリンクやページを右クリックして短縮
+- 📜 **履歴**: 最近短縮したURLをコピー・削除機能付きで記録
+- 📱 **QRコード**: 短縮URLのQRコードを生成
+- 🌙 **ダークモード**: ダークモード切替またはシステム設定の自動検出
 - ⚡ 高速で軽量、モダンなレスポンシブUIデザイン
 
 ---
@@ -55,6 +64,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 📋 **Copie en un clic**: Copiez les URL raccourcies dans le presse-papiers instantanément
 - 🎯 **Détection automatique d'URL**: Charge automatiquement l'URL de l'onglet actuel à l'ouverture
 - 🖱️ **Menu contextuel**: Clic droit sur n'importe quel lien ou page pour le raccourcir
+- 📜 **Historique**: Gardez une trace de vos URL raccourcies récentes avec options de copie et suppression
+- 📱 **Code QR**: Générez des codes QR pour vos URL raccourcies
+- 🌙 **Mode sombre**: Basculez le mode sombre ou détection automatique des préférences système
 - ⚡ Rapide et léger avec un design d'interface utilisateur moderne et réactif
 
 ---
@@ -69,6 +81,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 📋 **Copia con un clic**: Copia URLs acortadas al portapapeles instantáneamente
 - 🎯 **Detección automática de URL**: Carga automáticamente la URL de la pestaña actual al abrir
 - 🖱️ **Menú contextual**: Clic derecho en cualquier enlace o página para acortarlo
+- 📜 **Historial**: Registra tus URLs acortadas recientes con opciones de copiar y eliminar
+- 📱 **Código QR**: Genera códigos QR para tus URLs acortadas
+- 🌙 **Modo oscuro**: Alterna el modo oscuro o detecta automáticamente las preferencias del sistema
 - ⚡ Rápido y ligero con diseño de interfaz de usuario moderno y responsivo
 
 ---
@@ -83,6 +98,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 📋 **Ein-Klick-Kopieren**: Kopieren Sie verkürzte URLs sofort in die Zwischenablage
 - 🎯 **Automatische URL-Erkennung**: Lädt automatisch die URL des aktuellen Tabs beim Öffnen
 - 🖱️ **Kontextmenü**: Rechtsklick auf jeden Link oder jede Seite zum Verkürzen
+- 📜 **Verlauf**: Verfolgen Sie Ihre kürzlich verkürzten URLs mit Kopier- und Löschoptionen
+- 📱 **QR-Code**: Erstellen Sie QR-Codes für Ihre verkürzten URLs
+- 🌙 **Dunkelmodus**: Dunkelmodus umschalten oder Systemeinstellungen automatisch erkennen
 - ⚡ Schnell und leichtgewichtig mit modernem, responsivem UI-Design
 
 ---
@@ -97,6 +115,9 @@ A Chrome extension that allows you to shorten URLs using is.gd, v.gd, or TinyURL
 - 📋 **Копирование одним кликом**: Мгновенно копируйте сокращенные URL в буфер обмена
 - 🎯 **Автоматическое определение URL**: Автоматически загружает URL текущей вкладки при открытии
 - 🖱️ **Контекстное меню**: Правый клик на любой ссылке или странице для сокращения
+- 📜 **История**: Отслеживайте недавно сокращённые URL с возможностью копирования и удаления
+- 📱 **QR-код**: Генерируйте QR-коды для сокращённых URL
+- 🌙 **Тёмный режим**: Переключайте тёмный режим или определяйте системные настройки автоматически
 - ⚡ Быстрое и легкое с современным отзывчивым дизайном интерфейса
 
 ## Table of Contents
@@ -186,8 +207,10 @@ The extension requires the following permissions:
 
 ## Privacy
 
-- No user data is collected or stored
+- No personal data is collected or transmitted
 - URLs are only sent to the selected shortening service (is.gd, v.gd, or TinyURL)
+- QR codes are generated via api.qrserver.com
+- URL shortening history is stored locally on your device
 - All processing happens locally in your browser
 
 ## Development
@@ -278,7 +301,8 @@ This extension:
 - Only processes URLs when explicitly requested by the user
 - Does not track, store, or transmit personal data
 - Uses official is.gd, v.gd, and TinyURL APIs over HTTPS
-- Stores only language preferences in Chrome sync storage
+- Stores only language preferences and dark mode setting in Chrome sync storage
+- URL shortening history is stored locally on your device
 - All data processing happens locally in your browser
 
 ## License
@@ -298,6 +322,16 @@ If you encounter any issues:
 For bug reports or feature requests, please create an issue in the repository.
 
 ## Version History
+
+- **1.2.0** - History, QR Code & Dark Mode
+  - Added History section to track recently shortened URLs (up to 20 items)
+  - Copy or delete individual history items, or clear all at once
+  - Click any history item to reload the original and shortened URLs
+  - Added QR Code generation for shortened URLs using qrserver.com API
+  - Added Dark Mode with toggle button and system preference auto-detection
+  - Dark mode preference saved and synced across browsers
+  - Updated all 12 language translations with new feature strings
+  - Bumped version to 1.2.0
 
 - **1.1.0** - TinyURL support & improvements
   - Added TinyURL as a third URL shortening service
